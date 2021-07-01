@@ -87,7 +87,6 @@ try:
     user = User.objects.earliest()
 except:
     ic('there are no migrations yet')
-
 try:
     token = RefreshToken.for_user(user).access_token
     LoginView.post.__doc__ = f"""

@@ -221,6 +221,7 @@ class WebsocketTests(TestClass):
 
     # 
     @pytest.mark.asyncio
+    @pytest.mark.timeout(60)
     async def test_get_singals(self):
         communicator = WebsocketCommunicator(application, f'alerts/?token={self.token}')
         connected, subprotocol = await communicator.connect()
