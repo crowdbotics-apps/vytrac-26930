@@ -4,3 +4,16 @@ env/
 .env
 staticfiles/
 postgres-data/
+.idea
+bin
+lib
+include
+postgres-data
+.DS_Store
+include
+dump.json
+#db.sqlite3
+requirements.txt
+.DS_Store
+.docker
+data

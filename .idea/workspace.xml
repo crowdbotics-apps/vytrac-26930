@@ -1,67 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8994540f-829c-4041-bc40-152abcce1449" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.override.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.override.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/heroku.yml" beforeDir="false" afterPath="$PROJECT_DIR$/heroku.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/api/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/api/v1/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/api/v1/serializers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/api/v1/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/api/v1/viewsets.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/management/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/management/commands/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/management/commands/createsuperuserauto.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/management/commands/customchangepassword.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/management/commands/generate_project_report.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0001_load_initial_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/storage_backends.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/account/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/account/logout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/account/signup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/users/user_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/users/user_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/slack-app-pencil.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/adapters.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests/factories.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests/test_forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests/test_models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests/test_urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests/test_views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vytrac_26930/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/vytrac_26930/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vytrac_26930/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/vytrac_26930/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vytrac_26930/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/vytrac_26930/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vytrac_26930/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/vytrac_26930/wsgi.py" afterDir="false" />
+    <list default="true" id="8994540f-829c-4041-bc40-152abcce1449" name="Default Changelist" comment="0">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db/pg_stat/db_0.stat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db/pg_stat/db_13395.stat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db/pg_stat/global.stat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dump.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,8 +183,16 @@
       <option name="presentableId" value="Default" />
       <updated>1625137548283</updated>
       <workItem from="1625137552569" duration="29000" />
-      <workItem from="1625137699681" duration="1161000" />
+      <workItem from="1625137699681" duration="2179000" />
     </task>
+    <task id="LOCAL-00001" summary="0">
+      <created>1625138897829</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1625138897829</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +208,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="0" />
+    <option name="LAST_COMMIT_MESSAGE" value="0" />
   </component>
   <component name="WindowStateProjectService">
     <state x="104" y="51" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1625138156262">
@@ -289,6 +267,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1625137992761" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1625138901094">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1625138901094" />
     <state x="341" y="147" width="598" height="565" key="find.popup" timestamp="1625138338591">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
