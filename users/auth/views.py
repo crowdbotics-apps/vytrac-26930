@@ -1,6 +1,7 @@
 import re
 
 import jwt
+from asgiref.sync import sync_to_async, async_to_sync
 from django.conf import settings
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.contrib.sites.shortcuts import get_current_site
@@ -84,9 +85,12 @@ class LoginView(generics.GenericAPIView):
 
 user = None
 try:
+    ic(user)
     user = User.objects.earliest()
+    ic(user)
 except:
     ic('there are no migrations yet')
+
 try:
     token = RefreshToken.for_user(user).access_token
     LoginView.post.__doc__ = f"""
