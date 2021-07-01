@@ -6,6 +6,6 @@ build:
     SECRET_KEY: build
 release:
   image: web
-  command:
-    - python3 manage.py migrate
-    - python3 manage.py dummy_data
+#  command:
+#    - python3 manage.py migrate
+#    - python3 manage.py dummy_data
