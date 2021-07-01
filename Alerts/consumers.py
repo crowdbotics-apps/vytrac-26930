@@ -23,48 +23,39 @@ class AlertsSer(serializers.ModelSerializer):
 from asgiref.sync import sync_to_async, async_to_sync
 
 
-class AlertsChannle(AsyncWebsocketConsumer):
+class AlertsChannle(WebsocketConsumer):
 
-    async def connect(self):
-
-        await self.accept()
-
+    def connect(self):
+        user = self.scope.get('user')
+        self.accept()
         ic(self.scope.get('user'))
-        await self.send('connected')
 
-        # results = sync_to_async(User.objects.all, thread_sensitive=True)()
-        # ic(results.__dict__)
+        try:
+            self.send(user.username + ' is connected.')
+        except:
+            self.send(user + ' is not alowed please provide a valide token')
+            # self.disconnect() #TODO
         #
-        # # __call__(self.scope)
-        # user = self.scope.get('user')
-        #
-        #
-        # try:
-        #     self.send(user.username + ' is connected.')
-        # except:
-        #     self.send('user')
-        #     # self.disconnect() #TODO
-        #
-        # queries = self.scope['query_string']
-        # queries = parse_qs(queries.decode("utf8"))
-        # for i in queries.keys():
-        #     queries[i] = queries[i][0]
-        #
-        # # if user:
-        # #     if not user.is_staff or not user.is_superuser:
-        # #         users = users.filter(id=user.id)
+        queries = self.scope['query_string']
+        queries = parse_qs(queries.decode("utf8"))
+        for i in queries.keys():
+            queries[i] = queries[i][0]
+
+        # if user:
+        #     if not user.is_staff or not user.is_superuser:
+        #         users = users.filter(id=user.id)
         # alerts = queryset_filtering(Alert, queries)
-        # serializer = AlertsSer(alerts, many=True)
-        #
-        # self.send(json.dumps(serializer.data))
-        #
-        # @receiver(post_save, sender=Alert)
-        # def __init__(sender, created, instance, **kwargs):
-        #     if created:
-        #         serializer = AlertsSer(Alert.objects.get(id=instance.id), many=False)
-        #         self.send(json.dumps(serializer.data))
+        serializer = AlertsSer(Alert.objects.all(), many=True)
+        ic(serializer.data)
+        self.send(json.dumps(serializer.data))
 
-    async def receive(self, text_data):
+        @receiver(post_save, sender=Alert)
+        def __init__(sender, created, instance, **kwargs):
+            if created:
+                serializer = AlertsSer(Alert.objects.get(id=instance.id), many=False)
+                self.send(json.dumps(serializer.data))
+
+    def receive(self, text_data):
         errors = []
         user = self.scope.get('user')
         # data = json.loads(text_data)
@@ -75,6 +66,6 @@ class AlertsChannle(AsyncWebsocketConsumer):
 
         # notifcation = return_notifcations(self.scope)
 
-    async def disconnect(self, close_code):
+    def disconnect(self, close_code):
         print(close_code)
         print(self)

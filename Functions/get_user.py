@@ -9,8 +9,7 @@ from django.core.exceptions import ValidationError
 
 @database_sync_to_async
 def get_user(querys):
-    ic(User.objects.count())
-
+    user_id = None
     try:
         token = parse_qs(querys.decode("utf8"))['token'][0]
         token_data = UntypedToken(token)
