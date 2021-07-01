@@ -20,4 +20,5 @@ RUN python3 manage.py collectstatic --no-input
 RUN adduser --disabled-password --gecos "" django
 USER django
 
-CMD uvicorn vytrac_26930.asgi:application --port $PORT --fd 0.0.0.0
+CMD uvicorn vytrac_26930.asgi:application --port $PORT --host 0.0.0.0
+#CMD daphne vytrac_26930.asgi:application --port $PORT --bind 0.0.0.0

@@ -27,24 +27,18 @@ class ModelSer(DynamicSerializer):
 class Views(ItemsView):
     def post(self,request,*args,**kwargs):
         """
-        # Quick examples:
-            - to say if new patient added then notify doctors and providers
-            `{
-             "trigers": ['update user groups'],
-             # note here the strecture of each triger is <action> <model> <field>
-             # or <action> <model>
-             # note: if you don't spcify a field the field_value should stay empy, or it will ignored
-            'groups':['doctors','providers']
-            }`
-
+        # Quick example:
             - if user oxgyen level__lt=80 then notify doctors and providers
-            `{
-            "model": "statistics",
-            "filter":"column__name=oxgyen_level",
-            "field":"field_value",
-            "field_value":"__lt=80",
-            'groups':['doctors','providers']
-            }`
+                params = {
+                "object_id": '',
+                "filter": '__lt=80',
+                "field_value": ...,
+                "priority": ...,
+                "trigers": ['timesheets statistics field_value'],
+                "users": [1,2,3],
+                "groups": ['doctors', 'providers',], // Note : groups you can mention them by name instead of id
+                }
+
         """
         groups = request.data.get('groups')
         trigers = request.data.get('trigers')
