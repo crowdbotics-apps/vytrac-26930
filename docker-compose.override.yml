@@ -1,19 +1,29 @@
-version: "3"
+version: "3.9"
 
 services:
+
   web:
     build:
       context: .
-      args:
-        SECRET_KEY: ${SECRET_KEY}
+#      args:
+#        SECRET_KEY: ${SECRET_KEY}
     env_file: .env
     volumes:
       - ./:/opt/webapp
     ports:
       - "8000:${PORT}"
+    command:
+      - python3 manage.py migrate
+      - python3 manage.py dummy_data
+
   postgres:
     environment:
-      POSTGRES_PASSWORD: <postgres_pwd>
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - DJANGO_SETTINGS_MODULE=vytrac_26930.settings
+      - CELERY_BROKER=redis://redis:6379/0
+      - CELERY_BACKEND=redis://redis:6379/0
     volumes:
       - ./postgres-data/postgres:/var/lib/postgresql/data
     ports:
@@ -21,3 +31,30 @@ services:
   redis:
     ports:
       - "6379:6379"
+
+#  rabbitmq:
+#    environment:
+#      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER:-admin}
+#      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS:-admin}
+#    volumes:
+#      - ./.docker/rabbitmq/etc/:/etc/rabbitmq/
+#      - ./.docker/rabbitmq/data/:/var/lib/rabbitmq/
+#      - ./.docker/rabbitmq/logs/:/var/log/rabbitmq/
+#    ports:
+#      - 5672:5672
+#      - 15672:15672
+
+#  celery:
+#    build: .
+#    command: celery -A core vytrac_26930 -l INFO
+#    volumes:
+#      - .:/usr/src/app
+#    environment:
+#      - DEBUG=1
+#      - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
+#      - CELERY_BROKER=redis://redis:6379/0
+#      - CELERY_BACKEND=redis://redis:6379/0
+#    depends_on:
+#      - web
+#      - redis
+#      - rabbitmq

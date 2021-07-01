@@ -1,0 +1,6 @@
+$ systemctl start rabbitmq-server
+# to check if system ir sruuning
+$ systemctl status rabbitmq-server
+
+# to run celery
+celery -A myprojectname worker -l info

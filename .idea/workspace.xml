@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8994540f-829c-4041-bc40-152abcce1449" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.override.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.override.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heroku.yml" beforeDir="false" afterPath="$PROJECT_DIR$/heroku.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/api/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/api/v1/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/api/v1/serializers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/api/v1/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/api/v1/viewsets.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/management/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/management/commands/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/management/commands/createsuperuserauto.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/management/commands/customchangepassword.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/management/commands/generate_project_report.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/migrations/0001_load_initial_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/storage_backends.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/account/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/account/logout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/account/signup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/home/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/users/user_detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/users/user_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/slack-app-pencil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/adapters.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/tests/factories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/tests/test_forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/tests/test_models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/tests/test_urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/tests/test_views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vytrac_26930/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/vytrac_26930/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vytrac_26930/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/vytrac_26930/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vytrac_26930/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/vytrac_26930/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vytrac_26930/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/vytrac_26930/wsgi.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="db036be7-8d2c-4e9a-93a0-c549a2ac3f16" />
+  <component name="ProjectId" id="1ui9Sen0gQgLQv9ihbgnVbu0lW1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Docker.docker py.3.9">
+    <configuration name="Test: Alerts.tests.test_websocket.WebsocketTests.test_connect" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="vytrac-26930" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </EXTENSION>
+      <option name="TARGET" value="Alerts.tests.test_websocket.WebsocketTests.test_connect" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test py.3.9" type="DjangoTestsConfigurationType">
+      <module name="vytrac-26930" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/.pyenv/versions/3.9.0/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </EXTENSION>
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="server py.3.9" type="Python.DjangoServer" factoryName="Django server">
+      <module name="vytrac-26930" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="vytrac_26930.settings" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/.pyenv/versions/3.9.0/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </EXTENSION>
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker py.3.9" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="removeVolumesOnComposeDown" value="true" />
+          <option name="commandLineOptions" value="--build" />
+          <option name="secondarySourceFiles">
+            <list>
+              <option value="docker-compose.override.yml" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django Server.server py.3.9" />
+      <item itemvalue="Django tests.test py.3.9" />
+      <item itemvalue="Django tests.Test: Alerts.tests.test_websocket.WebsocketTests.test_connect" />
+      <item itemvalue="Docker.docker py.3.9" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Django tests.Test: Alerts.tests.test_websocket.WebsocketTests.test_connect" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8994540f-829c-4041-bc40-152abcce1449" name="Default Changelist" comment="" />
+      <created>1625137548283</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1625137548283</updated>
+      <workItem from="1625137552569" duration="29000" />
+      <workItem from="1625137699681" duration="1161000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="104" y="51" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1625138156262">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="104" y="51" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1625138156262" />
+    <state x="104" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.777@0.23.1280.777" timestamp="1625137890860" />
+    <state x="498" y="263" key="DockerComposeFileDialog" timestamp="1625138113122">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="498" y="263" key="DockerComposeFileDialog/0.0.1280.800@0.0.1280.800" timestamp="1625138113122" />
+    <state x="499" y="133" key="EnvironmentVariablesDialog" timestamp="1625138146171">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="499" y="133" key="EnvironmentVariablesDialog/0.0.1280.800@0.0.1280.800" timestamp="1625138146171" />
+    <state width="1238" height="302" key="GridCell.Tab.0.bottom" timestamp="1625138595695">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="302" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1625138595695" />
+    <state width="1238" height="198" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1625137866916" />
+    <state width="1238" height="302" key="GridCell.Tab.0.center" timestamp="1625138595694">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="302" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1625138595694" />
+    <state width="1238" height="198" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1625137866915" />
+    <state width="1238" height="302" key="GridCell.Tab.0.left" timestamp="1625138595694">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="302" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1625138595694" />
+    <state width="1238" height="198" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1625137866915" />
+    <state width="1238" height="302" key="GridCell.Tab.0.right" timestamp="1625138595695">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="302" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1625138595695" />
+    <state width="1238" height="198" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1625137866916" />
+    <state width="1238" height="264" key="GridCell.Tab.1.bottom" timestamp="1625138408537">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="264" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1625138408537" />
+    <state width="1238" height="264" key="GridCell.Tab.1.center" timestamp="1625138408536">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="264" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1625138408536" />
+    <state width="1238" height="264" key="GridCell.Tab.1.left" timestamp="1625138408535">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="264" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1625138408535" />
+    <state width="1238" height="264" key="GridCell.Tab.1.right" timestamp="1625138408536">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="264" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1625138408536" />
+    <state x="149" y="39" key="SettingsEditor" timestamp="1625137992761">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1625137992761" />
+    <state x="341" y="147" width="598" height="565" key="find.popup" timestamp="1625138338591">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="341" y="147" width="598" height="565" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1625138338591" />
+    <state x="341" y="166" width="598" height="548" key="find.popup/0.23.1280.777@0.23.1280.777" timestamp="1625137863834" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/vytrac_26930$Test__Alerts_tests_test_websocket_WebsocketTests_test_connect.coverage" NAME="Test: Alerts.tests.test_websocket.WebsocketTests.test_connect Coverage Results" MODIFIED="1625138556720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/vytrac_26930$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1625137866898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>
