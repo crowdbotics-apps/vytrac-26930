@@ -1,6 +1,7 @@
 import json
 from urllib.parse import parse_qs
 
+from channels.db import database_sync_to_async
 from channels.generic.websocket import WebsocketConsumer, AsyncWebsocketConsumer
 from django.db.models.signals import post_save
 from django.dispatch import receiver
@@ -8,11 +9,9 @@ from icecream import ic
 from rest_framework import serializers
 
 from Alerts.models import Alert
-from Functions.get_user import get_user
 from Functions.queryset_filtering import queryset_filtering
 
 
-# from Alerts.models import Alert
 from users.models import User
 
 
@@ -24,9 +23,9 @@ from asgiref.sync import sync_to_async, async_to_sync
 
 
 class AlertsChannle(WebsocketConsumer):
-
     def connect(self):
         user = self.scope.get('user')
+        ic(user)
         self.accept()
         ic(self.scope.get('user'))
 
@@ -46,8 +45,8 @@ class AlertsChannle(WebsocketConsumer):
         #         users = users.filter(id=user.id)
         # alerts = queryset_filtering(Alert, queries)
         serializer = AlertsSer(Alert.objects.all(), many=True)
-        ic(serializer.data)
         self.send(json.dumps(serializer.data))
+        ic(Alert.objects.count())
 
         @receiver(post_save, sender=Alert)
         def __init__(sender, created, instance, **kwargs):

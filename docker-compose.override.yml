@@ -12,9 +12,6 @@ services:
       - ./:/opt/webapp
     ports:
       - "8000:${PORT}"
-    command:
-      - python3 manage.py migrate
-      - python3 manage.py dummy_data
 
   postgres:
     environment:

@@ -17,11 +17,13 @@ from vytrac_26930.asgi import application
 
 
 class WebsocketTests(TestClass):
+    
     def setUp(self):
         calendar_setup(self)
         super().setUp()
 
-
+    
+    
     async def test_connect(self):
         communicator = WebsocketCommunicator(application, '/alerts/')
         connected, subprotocol = await communicator.connect()
@@ -31,6 +33,8 @@ class WebsocketTests(TestClass):
 
         await communicator.disconnect()
 
+    
+    
     async def test_connect(self):
         communicator = WebsocketCommunicator(application, f'alerts/?token={self.token}')
         connected, subprotocol = await communicator.connect()
@@ -199,7 +203,8 @@ class WebsocketTests(TestClass):
     #         message = {"":""}
     #         res = await websocket.send('message')
 
-    @pytest.mark.asyncio
+    
+    
     async def test_AnonymousUser(self):
         ic(self.user)
         # x = await sync_to_async(User.objects.count)()
@@ -214,33 +219,29 @@ class WebsocketTests(TestClass):
         assert res == '[]' #TODO test disconnect if AnonymousUser
         await communicator.disconnect()
 
+    # 
     @pytest.mark.asyncio
     async def test_get_singals(self):
         communicator = WebsocketCommunicator(application, f'alerts/?token={self.token}')
         connected, subprotocol = await communicator.connect()
         assert connected
         res = await communicator.receive_from()
-        event = await sync_to_async(Event.objects.create)(created_by=self.user, title='my new event')
         res = await communicator.receive_from()
+        event = await sync_to_async(Event.objects.create)(created_by=self.user, title='my new event')
         res = await communicator.receive_from()
         assert f'"object_id": {event.id}' in str(res)
         await communicator.disconnect()
 
-    @pytest.mark.asyncio
+    
     async def test_connect(self):
         event1 = await sync_to_async(Event.objects.create)(created_by=self.user, title='first event')
         event2 = await sync_to_async(Event.objects.create)(created_by=self.user, title='second event')
-        x = await sync_to_async(Alert.objects.count)()
-        ic(x)
         communicator = WebsocketCommunicator(application, f'alerts/?token={self.token}')
         connected, subprotocol = await communicator.connect()
         assert connected
         res = await communicator.receive_from()
-
-
         res = await communicator.receive_from()
-        # res = await communicator.receive_from()
-        ic(res)
+        # TODO
         # assert f'"object_id": {event1.id}' in str(res)
         # assert f'"object_id": {event2.id}' in str(res)
         await communicator.disconnect()
