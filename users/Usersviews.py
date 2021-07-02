@@ -46,7 +46,8 @@ class UserView(ItemView):
 
 class UsersView(ItemsView):
     """
-    Note: `domain.com/users/?groups__conainets=patient` to get all patients instead of all uses
+    - Note: `domain.com/users/?groups__conainets=patient` to get all patients instead of all uses
+    - the patient roster is relational data so any user profile can be a aptient roster in case `groups__conainets=patient`
     """
     queryset = User.objects.all()
     serializer_class = serializers.UsersSerializer

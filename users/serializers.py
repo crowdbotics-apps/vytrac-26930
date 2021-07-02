@@ -5,6 +5,7 @@ from rest_framework.serializers import (
 
 from Functions.DynamicSer import DynamicSerializer
 from patients.views import patients, SymptomsHistory
+from patients.views.book_services import RelationalBookingSer
 from timesheets.urls import StaSer
 from .models import User, Availablity
 from .views.address import RelationaladdressSer
@@ -60,10 +61,11 @@ class UsersSerializer(DynamicSerializer):
     symptoms_history = SymptomsHistory.SymtomsHistorySer(many=True, read_only=True)
     availablity = RelationalAvalibitlySer(many=True, read_only=True)
     address = RelationaladdressSer(many=False, read_only=True)
+    booked_services = RelationalBookingSer(many=True, read_only=True)
     # RPMplan #TODO
     class Meta:
         model = User
-        fields = [*[x.name for x in User._meta.fields], 'events', 'patient_profile','statistics','symptoms_history','availablity','address','RPMplan']
+        fields = [*[x.name for x in User._meta.fields], 'events', 'patient_profile','statistics','symptoms_history','availablity','address','RPMplan','booked_services']
 
 
 class UpdateUsersSerializer(DynamicSerializer):

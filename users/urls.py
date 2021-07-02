@@ -34,6 +34,7 @@ urlpatterns = [
     path('address/<int:pk>/', address.View.as_view(), name='address'),
     path('notes', Notes.Views.as_view(), name='notes'),
     path('notes/<int:pk>/', Notes.View.as_view(), name='notes'),
+
     # path('groups/', Usersviews.UsersView.as_view(), name='all_users'),
     # path('groups/<int:pk>/', Usersviews.UserView.as_view(), name='get, update'),
 

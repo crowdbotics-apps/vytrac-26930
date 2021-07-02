@@ -56,12 +56,6 @@ rosters = (
 )
 
 
-class Roster(SafeDeleteModel):
-    title = models.CharField(max_length=999, unique=True)
-    cost = models.PositiveIntegerField(blank=True, null=True)
-    serveces = models.CharField(choices=rosters, max_length=50, blank=True)
-
-
 class Insurance(SafeDeleteModel):
     primary = models.CharField(max_length=50, blank=True)
     secondary = models.CharField(max_length=50, blank=True)
@@ -171,8 +165,6 @@ class Patient(SafeDeleteModel):
     is_adhering = models.BooleanField(default=False)
 
     # Display patient Engagement(booked_servces, ... ) on dashboard toggle
-    booked_servces = models.ManyToManyField(
-        Roster, related_name='booked_servces', blank=True)
     user = models.OneToOneField(
         User,
         related_name='patient_profile',
@@ -189,7 +181,7 @@ class Patient(SafeDeleteModel):
 class EmergencyContact(models.Model):
     patient = models.ManyToManyField(
         Patient, related_name='emergency_contact', blank=True)
-    first_name = models.CharField(max_length=50, blank=True)
+    first_name = models.CharField(max_length=999, blank=True, null=True)
     last_name = models.CharField(max_length=50, blank=True)
     phone_number = models.TextField(
         max_length=500, blank=True, null=True, validators=[PHONE_NUMBER_REGEX])
@@ -234,7 +226,13 @@ class Reports(SafeDeleteModel):
 
 
 class CPTcode(SafeDeleteModel):
-    code = models.CharField(max_length=999, unique=True)
+    code = models.CharField(max_length=999, unique=True, blank=True,null=True)
+    name = models.CharField(max_length=999, unique=True, blank=True,null=True)
+
+
+class Booking(SafeDeleteModel):
+    cpt = models.ManyToManyField(CPTcode, related_name='cpts',  blank=True,null=True)
+    user = models.ForeignKey(User, related_name='booked_services', null=True, on_delete=models.SET_NULL)
 
 
 class Payment(SafeDeleteModel):

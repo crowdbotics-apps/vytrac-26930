@@ -94,8 +94,8 @@ environ = "*"
 fastapi = "*"
 celery = "*"
 rabbitmq = "*"
-django = "*"
 uvicorn = "*"
+django = "*"
 
 [dev-packages]
 

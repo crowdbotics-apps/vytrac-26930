@@ -1,18 +1,11 @@
-# from users.models import User
 import pytest
-from asgiref.sync import async_to_sync, sync_to_async
+from asgiref.sync import sync_to_async
 from channels.testing import WebsocketCommunicator
 from icecream import ic
-import json
 
-# from Alerts.consumers import AlertsChannle
-# from Alerts.models import Alert
-# import asyncio
-from Alerts.models import Alert
 from Functions.TestClass import TestClass
 from Functions.calendar_setup import calendar_setup
 from calendars.models import Event
-from users.models import User
 from vytrac_26930.asgi import application
 
 
@@ -203,8 +196,8 @@ class WebsocketTests(TestClass):
     #         message = {"":""}
     #         res = await websocket.send('message')
 
-    
-    
+
+
     async def test_AnonymousUser(self):
         ic(self.user)
         # x = await sync_to_async(User.objects.count)()
@@ -233,7 +226,8 @@ class WebsocketTests(TestClass):
         assert f'"object_id": {event.id}' in str(res)
         await communicator.disconnect()
 
-    
+    @pytest.mark.asyncio
+    @pytest.mark.timeout(60)
     async def test_connect(self):
         event1 = await sync_to_async(Event.objects.create)(created_by=self.user, title='first event')
         event2 = await sync_to_async(Event.objects.create)(created_by=self.user, title='second event')

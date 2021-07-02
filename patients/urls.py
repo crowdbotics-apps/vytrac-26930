@@ -1,15 +1,12 @@
 
 from django.urls import path
 
-from .views import roster, payment, patients, Emergency_contact, SymptomsHistory, Disease, RPMplan
+from .views import payment, patients, Emergency_contact, SymptomsHistory, Disease, RPMplan, book_services
 
 urlpatterns = [
 
     path('emergency_contact/', Emergency_contact.Views.as_view(), name='Emergency_contacts'),
     path('emergency_contact/<int:pk>/', Emergency_contact.View.as_view(), name='Emergency_contact'),
-
-    path('rosters/', roster.Views.as_view(), name='rosters'),
-    path('rosters/<int:pk>/', roster.View.as_view(), name='roster'),
 
     path('billings/', payment.Views.as_view(), name='billings'),
     path('billings/<int:pk>/', payment.View.as_view(), name='billing'),
@@ -22,6 +19,8 @@ urlpatterns = [
     path('diseases/<int:pk>/', Disease.View.as_view(), name='Disease'),
     path('RPMplan', RPMplan.Views.as_view(), name='RPMplans'),
     path('RPMplan/<int:pk>/', RPMplan.View.as_view(), name='RPMplan'),
+    path('booking', book_services.Views.as_view(), name='bookings'),
+    path('booking/<int:pk>/', book_services.View.as_view(), name='booking'),
 
 
 ]
