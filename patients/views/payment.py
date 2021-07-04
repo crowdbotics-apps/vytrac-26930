@@ -1,6 +1,6 @@
 from Functions.DynamicSer import DynamicSerializer
 from Functions.MyViews import ItemView, ItemsView
-from patients.models import models
+from patients import models
 
 MyModel = models.Payment
 

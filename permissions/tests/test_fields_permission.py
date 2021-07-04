@@ -1,14 +1,13 @@
 import datetime
 
-from django.contrib.auth.models import Group, Permission
+from django.contrib.auth.models import Group
 from faker import Faker
-from icecream import ic
 
 from Functions.Permissions import perm
 from Functions.TestClass import TestClass
 from Functions.make_fields_permissions import make_fields_permissions
 from calendars.models import DateType
-from patients.models.models import Patient
+from patients.models import Patient
 from users.models import User
 
 fake = Faker()

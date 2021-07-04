@@ -258,7 +258,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'crowboticstest@gmail.com'
 EMAIL_HOST_PASSWORD = 'my@NewPassword'
 
-
+USE_TZ = True
 host = os.environ.get('REDIS_URL', 'redis://localhost:6379') if is_deploied else ('0.0.0.0', 6379)
 CHANNEL_LAYERS = {
     'default': {

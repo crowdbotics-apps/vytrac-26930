@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from patients.models import models
+from patients import models
 
 admin.site.register(models.Patient)
 admin.site.register(models.Symptom)

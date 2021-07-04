@@ -10,7 +10,7 @@ from Alerts.models import Alert, AlertRule
 from Functions.TestClass import TestClass
 from calendars.models import Event
 from Functions.calendar_setup import calendar_setup
-from patients.models.models import Patient
+from patients.models import Patient
 
 class TestRules(TestClass):
     def setUp(self):

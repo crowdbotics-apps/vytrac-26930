@@ -1,6 +1,6 @@
 from Functions.MyViews import ItemView, ItemsView
 from Functions.DynamicSer import DynamicSerializer
-from patients.models import models
+from patients import models
 
 MyModel = models.RPMplan
 

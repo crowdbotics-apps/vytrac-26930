@@ -2,7 +2,6 @@ from icecream import ic
 from rest_framework import status
 
 from Functions.TestClass import TestClass
-from patients.models.models import SymptomsHistory, Symptom
 
 
 class PatientsAppTests(TestClass):

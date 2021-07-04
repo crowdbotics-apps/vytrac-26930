@@ -33,17 +33,18 @@ description = """
     - example
      1. `user__in=[1,2,3]`
      2. `user__username__in=AliJesusNikolina` you can also check if string is part of a bigger string  
+     
 5. `fieldname__sumfielname` = this used for subfields like you can say `column__name=anyname` to get all columns with subobjs that have name = anyname 
-6. you can add `latest=true`, `earlist=true` to get the laties or earlist object in case it have a field `date_created`
         - example
-        
-        ```
-        {
-        "column":{
-            "name":"anyname","value":"anyvalue"
-        }
-        }
-        ```
+                
+                ```
+                {
+                "column":{
+                    "name":"anyname","value":"anyvalue"
+                }
+                }
+                ```
+6. you can add `latest=true`, `earlist=true` to get the laties or earlist object in case it have a field `date_created`
 7. `fields=<fieldname>,<fieldname><..>`,
     - example: `?fields=username,id,` this will filter out all other fields 
         

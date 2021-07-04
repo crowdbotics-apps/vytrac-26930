@@ -4,7 +4,7 @@ from factory.django import DjangoModelFactory
 
 from Functions.Permissions import perm
 from calendars.models import Event, DateType
-from patients.models.models import Patient
+from patients.models import Patient
 from users.models import User
 
 import random

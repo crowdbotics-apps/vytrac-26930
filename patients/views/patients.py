@@ -1,10 +1,9 @@
-from rest_framework import serializers, status
-from rest_framework.response import Response
+from rest_framework import serializers
 
 from Functions.DynamicSer import DynamicSerializer
 from Functions.MyViews import ItemView, ItemsView
-from patients.models import models
-from patients.models.models import SymptomsHistory
+from patients import models
+from patients.models import SymptomsHistory
 
 MyModel = models.Patient
 
@@ -21,7 +20,7 @@ class symptoms_ser(serializers.ModelSerializer):
 
 class ModelSer(DynamicSerializer):
 
-    emergency_contact = emergency_contact_ser(models.EmergencyContact,many=True, required=False,read_only=True)
+    emergency_contact = emergency_contact_ser(models.EmergencyContact, many=True, required=False, read_only=True)
     symptoms = symptoms_ser(many=True, required=False, read_only=True)
 
     class Meta:
