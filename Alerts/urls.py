@@ -16,7 +16,9 @@ class AlertsView(generics.ListAPIView):
         ```
             {target:'events', id:1, is_seen:true}
         ```
-    - note quereis and filters als work here.
+    - Note quereis and filters also work here.
+        - In additional query you can add `?related_only=tru` this will filter out the unrelated alert for the currened loged-in users
+            - this is usful if the user `is_useruser` in which she/he have the option to view all alerts of other users.
     """
     pass
 

@@ -231,7 +231,7 @@ class CPTcode(SafeDeleteModel):
 
 
 class Booking(SafeDeleteModel):
-    cpt = models.ManyToManyField(CPTcode, related_name='cpts',  blank=True,null=True)
+    cpt = models.ManyToManyField(CPTcode, related_name='cpts',blank=True)
     user = models.ForeignKey(User, related_name='booked_services', null=True, on_delete=models.SET_NULL)
 
 
