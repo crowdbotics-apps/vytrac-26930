@@ -2383,7 +2383,7 @@ textarea.form-control {
   background-color: transparent;
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  font-size: 8PT;
   line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2419,9 +2419,9 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  color: #1890FF;
+  background-color: #DFF0FF;
+  border-color: #DFF0FF;
 }
 
 .btn-primary:hover {
@@ -2624,8 +2624,8 @@ fieldset:disabled a.btn {
 
 .btn-light {
   color: #212529;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  background-color: #FFF;
+  border-color: #FFF;
 }
 
 .btn-light:hover {
@@ -9896,7 +9896,6 @@ a.text-dark:hover, a.text-dark:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 .login-background-image {
   width: 100%;
@@ -9991,5 +9990,41 @@ a.text-dark:hover, a.text-dark:focus {
 }
 .smaller-text {
   font-size: 8pt;
+}
+.grey-text {
+  color: #8FAAC4;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+}
+.username-label {
+  margin-top: 80px;
+  margin-bottom: 0px;
+}
+.text-field {
+  border-width: 0px 0px 1px 0px;
+  border-color: #D4E7FA;
+  width: 100%;
+  font-size: 11px;
+  margin-top: 10px;
+  padding: 5px;
+}
+.login-bottom-buttons-container {
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 100%;
+}
+.greycheck {
+  border: 1px solid #8FAAC4;
+  height: 15px;
+  width: 15px;
+  border-radius: 2px;
+  margin-top: 6px;
+  margin-left: 15px;
+}
+.remember-me {
+  padding-top: 30px;
+  padding-left: 5px;
 }
 /*# sourceMappingURL=bootstrap.css.map */
