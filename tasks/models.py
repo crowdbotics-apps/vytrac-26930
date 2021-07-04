@@ -62,8 +62,7 @@ class Task(models.Model):
 
     responsible = models.ManyToManyField(
         settings.AUTH_USER_MODEL, related_name='responsible', blank=True)
-    dates = models.ManyToManyField(
-        Event, related_name='responsible', blank=True)
+    dates = models.ManyToManyField(Event, related_name='responsible', blank=True)
     type = models.CharField(
         _("type"), max_length=20, choices=TYPES, default='10_normal')
 

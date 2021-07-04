@@ -50,9 +50,6 @@ class RegisterView(generics.GenericAPIView):
         return Response(user_data, status=status.HTTP_201_CREATED)
 
 
-x = 'helo'
-
-
 class LoginView(generics.GenericAPIView):
     serializer_class = serializers.MyTokenObtainPairSerializer
 
@@ -82,25 +79,6 @@ class LoginView(generics.GenericAPIView):
             'user': serializer.data
         })
 
-
-user = None
-try:
-    ic(user)
-    user = User.objects.earliest()
-    ic(user)
-except:
-    ic('there are no migrations yet')
-
-try:
-    token = RefreshToken.for_user(user).access_token
-    LoginView.post.__doc__ = f"""
-        - ## dummy login
-        - username = {user.username}
-        - password = password
-        - token={str(token)}
-            """
-except:
-    pass
 
 class VerifyEmail(APIView):
     serializer_class = serializers.EmailVerificationSerializer

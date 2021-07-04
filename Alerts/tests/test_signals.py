@@ -1,6 +1,7 @@
 from django.contrib.auth.models import Group
 from icecream import ic
 
+from Functions.MyAppsConfig import create_all_data_str
 from Functions.make_fields_permissions import make_fields_permissions
 
 from rest_framework import status
@@ -26,12 +27,7 @@ class TestRules(TestClass):
                 make_fields_permissions(Permission, ContentType, Model)
             except:
                 pass
-        for i in Permission.objects.all():
-            if 'Can view' not in i.name:
-                i.name = i.name.replace('Can ', '')
-                newdata, created = AllDataStr.objects.get_or_create(name=i.name, codename=i.codename)
-                newdata.content_type = i.content_type
-                newdata.save()
+        create_all_data_str(Permission,AllDataStr)
 
     def test_monitor(self):
         i = Alert.objects.all().count()
@@ -40,12 +36,33 @@ class TestRules(TestClass):
         assert f == i + 1
 
 
-    def test_monitor_delete(self):
+    def test_dont_alert_delete_if_not_passed(self):
         i = Alert.objects.all().count()
-        event = Event.objects.create(created_by=self.user, title='event')
+        event = Event.objects.create(created_by=self.user, title='event',end=self.after_1_d)
         event.delete()
         f = Alert.objects.all().count()
-        # assert f == i + 2 #TODO Note you may not need alerts for deleting events, only incase the event deadline not passed yet
+        assert f == i+1
+
+    def test_alert_if_passed(self):
+        i = Alert.objects.all().count()
+        event = Event.objects.create(created_by=self.user, title='event',end=self.before_1_d)
+        event.delete()
+        f = Alert.objects.all().count()
+        messages = Alert.objects.latest().messages
+        assert messages['type'] == 'soft delete'
+        assert f == i + 2
+
+    def test_pre_save_messages(self):
+        i = Alert.objects.all().count()
+        event = Event.objects.create(created_by=self.user, title='event',end=self.after_1_d)
+        event.title = 'update'
+        event.save()
+        f = Alert.objects.all().count()
+        ic(f,i)
+        # TODO
+        assert f == i + 2
+        assert Alert.objects.latest().messages['new data']['title'] == 'event'
+
 
     def test_adding_users(self):
         i = Alert.objects.all().count()
@@ -82,12 +99,17 @@ class TestRules(TestClass):
         }
         res = self.client.post('/alerts/rules/', params)
         # TODO add did you mean
+        ic(res.data)
         assert f"You may have a typo in the triger name add patent" in str(res.data)
         self.assertEqual(res.status_code, status.HTTP_400_BAD_REQUEST)
 
     def test_add_rule(self):
+        res = self.client.get('/alerts/trigers/?codename__contains=add_patient&content_type__model=patient')
+        id = res.data[0]['id']
+        assert res.data[0]['name'] == 'add patient'
+
         data = {
-            "trigers": ['add patient'],
+            "trigers": [id],
             "users": [self.user.id, self.user2.id],
         }
         assert AlertRule.objects.count() == 0
@@ -95,11 +117,13 @@ class TestRules(TestClass):
         self.assertEqual(res.status_code, status.HTTP_201_CREATED)
 
         assert res.data['users'] == [1, 2]
-        ic(res.data)
         assert AlertRule.objects.count() == 1
 
         i = Alert.objects.all().count()
-        Patient.objects.create(user=self.user)
+        new_patient = Patient.objects.create(user=self.user)
+        new_patient.score = 2
+        new_patient.save() #this to test to not alert when updte and only when add
+
         f = Alert.objects.all().count()
         assert f == i + 1
 

@@ -34,7 +34,9 @@ class Views(ItemsView):
                 "filter": '__lt=80',
                 "field_value": ...,
                 "priority": ...,
-                "trigers": ['timesheets statistics field_value'],
+                "trigers": [235],
+                # for trigers go to /alerts/trigers/?content_type__model=value&codename__contains=field_value
+                # then copy the id and add it to the trigers list
                 "users": [1,2,3],
                 "groups": ['doctors', 'providers',], // Note : groups you can mention them by name instead of id
                 }
@@ -55,18 +57,18 @@ class Views(ItemsView):
         else:
             request.data['groups'] = []
 
-        trigers_ids = []
-
-        if trigers:
-            for i in trigers:
-                try:
-                    triger = AllDataStr.objects.get(name=i)
-                    trigers_ids.append(triger.id)
-                except:
-                    return Response(f"You may have a typo in the triger name {i}", status=status.HTTP_400_BAD_REQUEST)
-            request.data['trigers'] = trigers_ids
-        else:
-            request.data['trigers'] = []
+        # trigers_ids = []
+        #
+        # if trigers:
+        #     for i in trigers:
+        #         try:
+        #             triger = AllDataStr.objects.get(name=i)
+        #             trigers_ids.append(triger.id)
+        #         except:
+        #             return Response(f"You may have a typo in the triger name {i}", status=status.HTTP_400_BAD_REQUEST)
+        #     request.data['trigers'] = trigers_ids
+        # else:
+        #     request.data['trigers'] = []
         return super().post(request,*args,**kwargs)
 
 

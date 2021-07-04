@@ -3,6 +3,7 @@ from django.db import models
 from safedelete.models import SafeDeleteModel
 
 from Functions.MyViews import Rec
+from users.models import User
 
 
 class DateType(SafeDeleteModel):
@@ -29,7 +30,7 @@ class Event(SafeDeleteModel):
     date_created = models.DateTimeField(auto_now_add=True, null=True)
     created_by = models.ForeignKey(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='events',  blank=True)
+    users = models.ManyToManyField(User, related_name='events',  blank=True)
     recurrence = Rec(choices=REC, blank=True, null=True)
     seen_by = models.ManyToManyField(
         settings.AUTH_USER_MODEL, related_name='seen_by', blank=True)

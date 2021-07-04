@@ -7,7 +7,16 @@ def calendar_setup(self):
     date_format = '%Y-%m-%d'
     time_format = '%H:%M:%S'
     d = datetime.datetime
+
+
     self.now = d.now().strftime(time_format)
+
+    before_1_d = d.now() - datetime.timedelta(days=1)
+    before_3_d = d.now() - datetime.timedelta(days=3)
+
+    self.before_1_d = before_1_d.strftime(date_format)
+    self.before_3_d = before_3_d.strftime(date_format)
+
     after_1_h = d.now() + datetime.timedelta(hours=1)
     after_5_h = d.now() + datetime.timedelta(hours=5)
     self.after_1_h = after_1_h.strftime(time_format)

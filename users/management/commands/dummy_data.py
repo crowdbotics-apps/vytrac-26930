@@ -2,7 +2,6 @@ from django.contrib.auth.models import Group
 import factory
 from factory.django import DjangoModelFactory
 
-# from polls.models import Question as Poll
 from Functions.Permissions import perm
 from calendars.models import Event, DateType
 from patients.models.models import Patient
@@ -46,6 +45,7 @@ class EventFacotry(DjangoModelFactory):
     description = factory.Faker("sentence")
     date_type = factory.SubFactory(DateTypeFacotry)
     created_by = factory.SubFactory(UserFactory)
+    # users = factory.SubFactory(UserFactory)
 
 
 
@@ -118,7 +118,10 @@ class Command(BaseCommand):
             # Create all the threads
         for _ in range(NUM_THREADS):
             creator = random.choice(people)
-            thread = EventFacotry(created_by=creator)
+            event = EventFacotry(created_by=creator)
+            event.users.add(random.choice(range(1,4)))
+            event.users.add(creator)
+            event.save()
 
 
 

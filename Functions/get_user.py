@@ -5,15 +5,21 @@ from icecream import ic
 from rest_framework_simplejwt.tokens import UntypedToken
 
 from users.models import User
-from django.core.exceptions import ValidationError
 
 @database_sync_to_async
 def get_user(querys):
     user_id = None
+    token = parse_qs(querys.decode("utf8")).get('token')
+    ic(User.objects.count())
+    if token:
+        token = token[0]
+    else:
+        return 'please provide a token'
+
     try:
-        token = parse_qs(querys.decode("utf8"))['token'][0]
         token_data = UntypedToken(token)
         user_id = token_data["user_id"]
+        ic(user_id)
     except:
         return 'token is invalid'
 

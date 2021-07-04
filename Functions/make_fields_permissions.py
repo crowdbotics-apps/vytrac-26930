@@ -7,7 +7,6 @@ def make_fields_permissions(Permission, ContentType, Model):
     permissions = []
     for item in Model._meta.fields:
         permissions.append(('view_' + modle_name + '.' + item.name + '_field', 'Can view ' + modle_name + " " + item.name.replace('_', ' ')))
-
         permissions.append(('change_' + modle_name + '.' + item.name + '_field', 'Can change ' + modle_name + " " + item.name.replace('_', ' ')))
 
 
