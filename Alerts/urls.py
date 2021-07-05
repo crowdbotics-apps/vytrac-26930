@@ -13,8 +13,9 @@ class AlertsView(generics.ListAPIView):
     - None
 
     <h1 class="label label-primary">send</h1>
+    to tell that the alert with id=1 is seen by the current loged-in user
         ```
-            {target:'events', id:1, is_seen:true}
+            {id:1, is_seen:true}
         ```
     - Note quereis and filters also work here.
         - In additional query you can add `?related_only=tru` this will filter out the unrelated alert for the currened loged-in users

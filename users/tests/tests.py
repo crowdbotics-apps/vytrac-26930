@@ -1,15 +1,8 @@
 from icecream import ic
-from rest_auth.tests.mixins import APIClient
 from rest_framework import status
-from rest_framework.test import APITestCase
 
 from Functions.TestClass import TestClass
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = 'crowboticstest@gmail.com'
-# EMAIL_HOST_PASSWORD = 'crowbotics123@1'
 from timesheets.models import Column, Value
-from users.models import User
 
 
 class AuthTestings(TestClass):
@@ -91,6 +84,49 @@ class AuthTestings(TestClass):
         res = self.client.get('/users/notes')
         self.assertEqual(res.status_code, status.HTTP_200_OK)
 
-    def test_nnn(self):
+    def test_users(self):
         res = self.client.get('/users/')
         self.assertEqual(res.status_code, status.HTTP_200_OK)
+
+
+    def test_update_user_groups(self):
+        res = self.client.get('/groups/all_permissions/?codename=view_user.username_field')
+        self.assertEqual(res.status_code, status.HTTP_200_OK)
+        can_view_username = res.data[0]['id']
+
+        res = self.client.get('/groups/all_permissions/?codename=view_patient')
+        self.assertEqual(res.status_code, status.HTTP_200_OK)
+        can_view_patient = res.data[0]['id']
+
+
+        params = {
+            "name": "providers",
+            "permissions": [can_view_patient,can_view_username],
+        }
+        res = self.client.post('/groups/',params)
+        self.assertEqual(res.status_code, status.HTTP_201_CREATED)
+
+        params = {
+            "groups": ['providers'],
+        }
+
+        res = self.client.put('/users/1/',params)
+        assert res.data['groups'] == [1]
+        self.assertEqual(res.status_code, status.HTTP_200_OK)
+
+    def test_update_user_groups_typos(self):
+        params = {
+            "name": "providers",
+            "permissions": [],
+        }
+        res = self.client.post('/groups/',params)
+        self.assertEqual(res.status_code, status.HTTP_201_CREATED)
+
+        params = {
+            "groups": ['providersx'],
+        }
+
+        res = self.client.put('/users/1/',params)
+        assert '"providersx" is not found, did you mean' in res.data
+        assert 'providers' in res.data
+        self.assertEqual(res.status_code, status.HTTP_400_BAD_REQUEST)

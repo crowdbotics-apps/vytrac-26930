@@ -10,6 +10,7 @@ class RelationalRPMplanSer(DynamicSerializer):
     class Meta:
         model = MyModel
         fields = ['name','description','muserments']
+        depth = 1
 
 class ModelSer(DynamicSerializer):
     class Meta:

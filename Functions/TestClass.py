@@ -3,6 +3,9 @@ import os
 
 from icecream import ic
 
+from Functions.MyAppsConfig import create_all_data_str
+from Functions.make_fields_permissions import make_fields_permissions
+
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'vytrac_26930.settings')
 
 import django
@@ -14,6 +17,24 @@ from rest_framework import status
 
 class TestClass(APITestCase):
     def setUp(self):
+
+        from django.contrib.auth.models import Permission
+        from django import apps
+        from django.contrib.contenttypes.models import ContentType
+        from Alerts.models import AllDataStr
+
+        for Model in apps.apps.get_models():
+            try:
+                make_fields_permissions(Permission, ContentType, Model)
+            except:
+                pass
+        try:
+
+
+            create_all_data_str(Permission, AllDataStr)
+        except:
+            pass
+
         user, create = User.objects.get_or_create(username='Clover', email='Clover@g.com', password='password')
         user.is_email_verified = True
         user.is_role_verified = True

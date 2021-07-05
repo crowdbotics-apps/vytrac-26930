@@ -153,6 +153,7 @@ class StatsticsView(ItemsView):
                 'potential typo': 'Did you mean ' + str(words) + '?',
                 "note": "If you think you do not have a typo send {'sure' : 'true'} with the data."})
 
+
         column, created = Column.objects.get_or_create(name=column['name'], user=User.objects.get(id=column['user']))
         request.data['column'] = column.id
         self.serializer_class = Postser

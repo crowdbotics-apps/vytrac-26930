@@ -20,7 +20,6 @@ class ItemsView(generics.ListAPIView):
     search_fields = '__all__'
 
     def get(self, request, *args, **kwargs):
-        ic(request.session.get('django_timezone'))
         context = {'request': request, 'method': 'view'}
 
         items = queryset_filtering(self.queryset.model, request.GET)

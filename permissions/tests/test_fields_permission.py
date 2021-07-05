@@ -19,16 +19,6 @@ class FieldsPerms(TestClass):
     def setUp(self):
         super().setUp()
 
-        from django.contrib.auth.models import Permission
-        from django import apps
-        from django.contrib.contenttypes.models import ContentType
-        for Model in apps.apps.get_models():
-            try:
-                make_fields_permissions(Permission, ContentType, Model)
-            except:
-                pass
-
-
         Patient.objects.create(user=self.user)
         Patient.objects.create(user=self.user2)
         Patient.objects.create(user=self.user3)
