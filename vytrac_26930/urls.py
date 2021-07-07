@@ -88,6 +88,7 @@ urlpatterns = [
     path('tasks/', include('tasks.urls')),
     path('automation/', include('automations.urls')),
     path('alerts/', include('Alerts.urls')),
+    # path('trash/', include('trash.urls')),
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

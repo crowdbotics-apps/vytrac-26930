@@ -15,21 +15,34 @@ class GroupSer(DynamicSerializer):
         model = MyModel
         fields = '__all__'
 
+class GetGroupSer(DynamicSerializer):
+    class Meta:
+        model = MyModel
+        fields = '__all__'
+        depth = 1
+
 
 class GroupsView(ItemsView):
     queryset = MyModel.objects.all()
     serializer_class = GroupSer
+    def get(self,*args,**kargs):
+        self.serializer_class = GetGroupSer
+        return super().get(*args,**kargs)
 
 
 class GroupView(ItemView):
     queryset = MyModel.objects.all()
     serializer_class = GroupSer
+    def get(self,*args,**kargs):
+        self.serializer_class = GetGroupSer
+        return super().get(*args,**kargs)
 
 
 class PermissionsModelSer(DynamicSerializer):
     class Meta:
         model = Permission
         fields = '__all__'
+
 
 
 class PermissionsView(generics.ListAPIView):

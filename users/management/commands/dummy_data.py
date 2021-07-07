@@ -76,8 +76,8 @@ class Command(BaseCommand):
         # Create groups
         groups = []
         Patients = Group.objects.create(name='Patients')
-
         groups.append(Patients)
+
         Doctors = Group.objects.create(name='Doctors')
         Doctors.permissions.add(perm('Can view user', User))
         Doctors.permissions.add(perm('Can view patient', Patient))
@@ -86,11 +86,11 @@ class Command(BaseCommand):
 
         groups.append(Doctors)
         providers = Group.objects.create(name='providers')
-        Patients.permissions.add(perm('Can view user', User))
-        Patients.permissions.add(perm('Can change user', User))
-        Patients.permissions.add(perm('Can view patient', Patient))
-        Patients.permissions.add(perm('Can change patient', Patient))
-        Patients.save()
+        providers.permissions.add(perm('Can view user', User))
+        providers.permissions.add(perm('Can change user', User))
+        providers.permissions.add(perm('Can view patient', Patient))
+        providers.permissions.add(perm('Can change patient', Patient))
+        providers.save()
         groups.append(providers)
 
         admin = User.objects.create_superuser(email='ali@g.com', username='ali', password='password')

@@ -1,18 +1,13 @@
-# noinspection PyPackageRequirements
-# from address.models import AddressField
-
+import pytz
 from django.conf import settings
+from django.contrib.auth.models import Permission
 from django.contrib.auth.models import User, AbstractUser, PermissionsMixin
 from django.core.validators import RegexValidator
-# Create your models here.
 from django.db import models
-from django.utils import timezone
 from safedelete import SOFT_DELETE
 from safedelete.models import (
     SafeDeleteModel
 )
-
-from django.contrib.auth.models import Permission
 
 from Functions.MyViews import Rec
 
@@ -65,15 +60,24 @@ class Sex(models.Model):
     name = models.CharField(max_length=50, blank=True)
 
 
+
 class User(AbstractUser, PermissionsMixin):
-    is_archived = models.BooleanField(default=False)
-    #TODO if is archived filter out from view
+    import pytz
+    timezones = []
+    for tz in pytz.all_timezones:
+        zone = tz
+        # offset = pytz.timezone(tz).utcoffset(datetime.now())
+        # now = datetime.now(tz=pytz.UTC).astimezone(pytz.timezone(tz))
+        timezones.append((tz,tz))
     _safedelete_policy = SOFT_DELETE
+    timezone = models.CharField(choices=timezones, max_length=99, blank=True)
+    is_archived = models.BooleanField(default=False)
+
     photo = models.ImageField(blank=True, null=True)
 
     username = models.CharField(
-        max_length=30, unique=True, validators=[USERNAME])
-    email = models.EmailField(max_length=250, unique=True)
+        max_length=30, unique=True, validators=[USERNAME], blank=True)
+    email = models.EmailField(max_length=250, unique=True,blank=True)
     secon_email = models.EmailField(max_length=250, blank=True)
     # unique=True #TODO
 

@@ -13,7 +13,7 @@ class TestBasics(TestClass):
     def test_add_grooup(self):
         params = {
             "name": 'docktor',
-            "permissions": [1, 2,]
+            "permissions": [1, 2]
         }
         res = self.client.post('/groups/',params)
         self.assertEqual(res.status_code,status.HTTP_201_CREATED)

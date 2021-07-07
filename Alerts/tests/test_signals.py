@@ -12,6 +12,8 @@ from calendars.models import Event
 from Functions.calendar_setup import calendar_setup
 from patients.models import Patient
 
+
+
 class TestRules(TestClass):
     def setUp(self):
         super().setUp()
@@ -34,6 +36,14 @@ class TestRules(TestClass):
         messages = Alert.objects.latest().messages
         assert 'soft delete' in str(messages)
         assert f == i + 2
+
+    #TODO all_with_deleted def test_myfu(self):
+    #     i = Alert.objects.all().count()
+    #     event = Event.objects.create(created_by=self.user, title='event',end=self.after_1_d)
+    #     event.delete()
+    #     f = Alert.objects.all().count()
+    #     messages = Alert.objects.latest().messages
+    #     ic(Event.objects.all_with_deleted())
 
     def test_dont_alert_if_passed(self):
         i = Alert.objects.all().count()

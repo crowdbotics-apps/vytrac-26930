@@ -28,6 +28,8 @@ class AlertsChannle(WebsocketConsumer):
 
         self.accept()
         self.send('connectted')
+        ic('xxx')
+        ic(User.objects.count())
         user = self.scope.get('user')
 
         queries = self.scope['query_string']

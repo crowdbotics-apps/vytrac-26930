@@ -6,7 +6,6 @@ from rest_framework import status
 
 from Functions.Permissions import perm
 from Functions.TestClass import TestClass
-from Functions.make_fields_permissions import make_fields_permissions
 from calendars.models import DateType
 from patients.models import Patient
 from users.models import User
@@ -139,12 +138,12 @@ class AuthTestings(TestClass):
         self.assertEqual(resp.status_code, status.HTTP_200_OK)
 
     def test_can_change(self):
-        resp = self.client.put('/users/1/', {'username': 'updated', 'password': 'password'})
+        resp = self.client.put('/users/2/', {'username': 'updated', 'password': 'password'})
         self.assertEqual(resp.status_code, status.HTTP_400_BAD_REQUEST)
-
+        #
         self.user.user_permissions.add(perm('Can change user', User))
         self.user.save()
-        resp = self.client.put('/users/1/', {'username': 'updated', 'password': 'password','email':'my@g.com'})
+        resp = self.client.put('/users/2/', {'username': 'updated', 'password': 'password','email':'my@g.com'})
         assert resp.data['username'] == 'updated'
         self.assertEqual(resp.status_code, status.HTTP_200_OK)
 
@@ -159,8 +158,27 @@ class AuthTestings(TestClass):
         res = self.client.get('/users/1/')
         self.assertEqual(res.status_code, status.HTTP_200_OK)
 
+    def test_is_put(self):
+        self.user.user_permissions.clear()
+        self.user.is_staff = False
+        self.user.is_superuser = False
+        self.user.save()
+        res = self.client.put('/users/2/',{})
+        self.assertEqual(res.status_code, status.HTTP_400_BAD_REQUEST)
+
+        res = self.client.put('/users/1/')
+        self.assertEqual(res.status_code, status.HTTP_200_OK)
+
     def test_cant_update_to_ununique(self):
-        res = self.client.put('/users/1/', {'username': 'Alex', 'password': 'password'})
+        res = self.client.put('/users/1/', {'username': self.user2.username, 'password': 'password'})
+        assert 'user with this username already exists' in str(res.data)
+        self.assertEqual(res.status_code, status.HTTP_400_BAD_REQUEST)
+
+    def test_cant_add_ununique(self):
+        self.user.is_superuser = True
+        self.user.save()
+        res = self.client.post('/users/', {'username': self.user2.username, 'password': 'password','email':'email@x.com'})
+        assert 'user with this username already exists' in str(res.data)
         self.assertEqual(res.status_code, status.HTTP_400_BAD_REQUEST)
 
     # TODO def test_staff_cannot_update_their_role(self):
@@ -168,6 +186,7 @@ class AuthTestings(TestClass):
     #   self.user.save()
     #   resp = self.client.put('/users/1/', {'is_superuser': 'true'})
     # self.assertEqual(resp.status_code, status.HTTP_400_BAD_REQUEST)
+
     def test_can_view_relational_felds(self):
         data = {
             "title": "first",

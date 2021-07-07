@@ -47,9 +47,9 @@ class UpdateSer(ModelSerializer):
 
 
 class UserSerForAddmin(DynamicSerializer):
-    email = serializers.EmailField(required=False,allow_blank=True)
-    username = serializers.CharField(required=False,allow_blank=True)
-    password = serializers.CharField(required=False,allow_blank=True)
+    email = serializers.EmailField(required=False)
+    username = serializers.CharField(required=False)
+    password = serializers.CharField(required=False)
     class Meta:
         model = User
         fields = '__all__'
@@ -64,29 +64,14 @@ class UsersSerializer(DynamicSerializer):
     address = RelationaladdressSer(many=False, read_only=True)
     booked_services = RelationalBookingSer(many=True, read_only=True)
     RPMplan = RelationalRPMplanSer(many=True,read_only=True)
-
     class Meta:
         model = User
         fields = [*[x.name for x in User._meta.fields], 'events', 'patient_profile','statistics','symptoms_history','availablity','address','RPMplan','booked_services','groups']
 
 
+
 class UpdateUsersSerializer(DynamicSerializer):
+    password = serializers.CharField(max_length=68, min_length=6, required=False)
     class Meta:
         model = User
-        fields = ["password",
-                  "last_login",
-                  "photo",
-                  "secon_email",
-                  "first_name",
-                  "last_name",
-                  "middle_name",
-                  "receive_newsletter",
-                  "birth_date",
-                  "city",
-                  "about_me",
-                  "phone_number",
-                  "second_phone_number",
-                  "imageUrl",
-                  "age",
-                  # "address"
-                  ]
+        fields = '__all__'

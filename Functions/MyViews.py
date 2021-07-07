@@ -28,7 +28,6 @@ class ItemsView(generics.ListAPIView):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def post(self, request):
-
         serializer = self.serializer_class(data=request.data, context={'method': 'add', 'request': request})
         if serializer.is_valid():
             serializer.save()
@@ -58,12 +57,14 @@ class ItemView(mixins.ListModelMixin,
         return Response(status=status.HTTP_204_NO_CONTENT)
 
     def put(self, request, pk, format=None):
+
         context = {'request': request, 'method': 'change', 'pk': pk}
         date = self.get_object(pk)
-        serializer = self.serializer_class(
-            date, context=context, data=request.data)
+        serializer = self.serializer_class(date, context=context, data=request.data)
         if serializer.is_valid():
             serializer.save()
+
+
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 

@@ -1,3 +1,4 @@
+import pytz
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.utils.encoding import force_str
 from django.utils.http import urlsafe_base64_decode
@@ -22,15 +23,16 @@ class LoginUsersSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class RegisterSerializer(ModelSerializer):
-    password = serializers.CharField(
-        max_length=68, min_length=6, write_only=True)
-
-    default_error_messages = {
-        'username': 'The username should only contain alphanumeric characters'}
+    timezones = []
+    username = serializers.CharField(max_length=555,required=True)
+    email = serializers.EmailField(required=True)
+    password = serializers.CharField(max_length=68, min_length=6, write_only=True)
+    default_error_messages = {'username': 'The username should only contain alphanumeric characters'}
 
     class Meta:
         model = User
-        fields = ['email', 'username', 'password']
+        fields = ['email', 'username', 'password','timezone']
+
 
     def validate(self, attrs):
         email = attrs.get('email', '')
