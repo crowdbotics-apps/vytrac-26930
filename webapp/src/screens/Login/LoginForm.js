@@ -34,13 +34,14 @@ class LoginForm extends Component {
   login() { 
     if(this.validate()) {
       try {
-        store.data.login(this.state.username + '', this.state.password + '').then((result) => {
+        /*store.data.login(this.state.username + '', this.state.password + '').then((result) => {
           if(result) {
             alert("Successful login!");
           } else {
             alert("Could not login");
           }
-        });
+        });*/
+        this.props.changeItem('login-token');
       } catch (ex) {
         alert("Could not login");
       }

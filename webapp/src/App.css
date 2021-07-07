@@ -54,7 +54,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Barlow, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -152,9 +152,10 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: #1890FF;
   text-decoration: none;
   background-color: transparent;
+  font-weight: bold;
 }
 
 a:hover {
@@ -9978,6 +9979,25 @@ a.text-dark:hover, a.text-dark:focus {
   margin-right: 23px;
   margin-left: 5px;
 }
+.grey-line-inv {
+  height:2px;
+  margin-left: 23px;
+  margin-right: 5px;
+  border-radius: 3px;
+  background: #D4E7FA;
+}
+.green-line-inv {
+  height:2px;
+  border-radius: 3px;
+
+  margin-right: 23px;
+  margin-left: 5px;
+
+  /* Green - Highlights */
+  background: #42DAB4;
+  box-shadow: 0px 3px 20px #50F4CB;
+  border-radius: 3px;
+}
 .vertical-container {
   margin-bottom: 40px;
 }
@@ -9987,6 +10007,9 @@ a.text-dark:hover, a.text-dark:focus {
 .bold-blue {
   font-weight: bold;
   color: #1890FF;
+}
+.normal-text {
+  font-size: 10pt;
 }
 .smaller-text {
   font-size: 8pt;
@@ -10009,7 +10032,36 @@ a.text-dark:hover, a.text-dark:focus {
   margin-top: 10px;
   padding: 5px;
 }
+.text-field:focus {
+  outline: none !important;
+  border-width: 0px 0px 1px 0px;
+  border-color: #42DAB4;
+}
+.text-field-token {
+  border-width: 0px 0px 1px 0px;
+  border-color: #D4E7FA;
+  width: 33px;
+  font-size: 11px;
+  margin-top: 10px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 30px;
+  color: #8FAAC3;
+  font-weight: 200;
+  text-align: center;
+}
+.text-field-token:focus {
+  outline: none !important;
+  border-width: 0px 0px 1px 0px;
+  border-color: #42DAB4;
+}
 .login-bottom-buttons-container {
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 100%;
+}
+.token-bottom-buttons-container {
   flex-direction: column;
   justify-content: space-between;
   margin-top: 50px;
@@ -10026,5 +10078,25 @@ a.text-dark:hover, a.text-dark:focus {
 .remember-me {
   padding-top: 30px;
   padding-left: 5px;
+}
+.centered-logo {
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  flex: 1;
+  text-align: center;
+}
+.shield-logo {
+  height: 62px;
+  width: 50px;
+}
+.logo-container {
+  padding: 19px 25px 19px 25px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  text-align: center;
+  background-color: #F8F9FB;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=bootstrap.css.map */
