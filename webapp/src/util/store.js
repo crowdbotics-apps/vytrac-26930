@@ -36,17 +36,18 @@ class StoreConfig {
 
     async login(username, password) {
         var _this = this;
+        const data = {
+            email: username,
+            password: password,
+            rememberMe: true
+        };
         return fetch(backendUrl + "login/", {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                email: username,
-                password: password,
-                rememberMe: true
-            })
+            body: JSON.stringify(data)
         })
             .then((response) => response.json())
             .then((responseJson) => {
