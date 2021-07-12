@@ -87,7 +87,7 @@ class LoginForm extends Component {
               </div>
 
               <div className="token-bottom-buttons-container">
-                <Button onClick={() => this.props.changeItem('login')} style={{marginRight: 95}} variant="light">CANCEL</Button>
+                <Button onClick={() => this.props.changeItem('login')}  style={{marginRight: '55%'}} variant="light">CANCEL</Button>
                 <Button onClick={() => this.login()}>CONTINUE</Button>
               </div>
         </div>

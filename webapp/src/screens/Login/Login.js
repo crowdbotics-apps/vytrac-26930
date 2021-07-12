@@ -84,23 +84,21 @@ class Login extends Component {
 
   render() {
     return (
-        <div className="login-background"> 
-          <Container className="login-container">
-            <Row className="login-row">
-              <Col className="login-background-image-gradient" xs={7}>
-                <img className="login-background-image" src={loginBackground}></img>
-                <div className="login-user-thumb"></div>
-                <div className="logos-container">
-                  <img className="login-logo-top" src={poweredBy}></img>
-                  <img className="login-logo-bottom" src={vytracWhite}></img>
-                </div>           
-              </Col>
-              <Col xs={5} className="login-form" xs={5}>
-                {this.showItem()}
-              </Col>
-            </Row>
-          </Container>
-        </div>
+      <Container className="login-container">
+        <Row className="login-row">
+          <Col className="login-background-image-gradient" xs={7}>
+            <img className="login-background-image" src={loginBackground}></img>
+            <div className="login-user-thumb"></div>
+            <div className="logos-container">
+              <img className="login-logo-top" src={poweredBy}></img>
+              <img className="login-logo-bottom" src={vytracWhite}></img>
+            </div>           
+          </Col>
+          <Col xs={5} className="login-form" xs={5}>
+            {this.showItem()}
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }

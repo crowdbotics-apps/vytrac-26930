@@ -79,6 +79,7 @@ class LoginForm extends Component {
 
               <p className="grey-text password-label top25">Password</p>
               <input onChange={(username) => this.setState({password1: username})} className="text-field" type="password" name="password1" />
+              <p className="grey-text password-label" style={{fontSize: 8, marginTop: 5}}>It must be 8 characters or more, have at least 1 number, 1 special character and 1 upper case</p>
 
               <p className="grey-text password-label top15">Confirm password</p>
               <input onChange={(username) => this.setState({password2: username})} className="text-field" type="password" name="password2" />
