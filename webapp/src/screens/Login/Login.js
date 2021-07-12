@@ -9,6 +9,8 @@ import {store} from '../../util/store'
 
 import LoginForm from './LoginForm';
 import LoginToken from './LoginToken';
+import ResetPassword from './ResetPassword';
+import ResetPasswordInput from './ResetPasswordInput';
 
 import loginBackground from '../../assets/images/login_background.png';
 import poweredBy from '../../assets/images/powered_by.png';
@@ -61,6 +63,14 @@ class Login extends Component {
       return (
         <LoginToken changeItem={this.changeItem.bind(this)}></LoginToken>
       )
+    } else if(this.state.currentItem == 'reset-password') {
+      return (
+        <ResetPassword changeItem={this.changeItem.bind(this)}></ResetPassword>
+      )
+    } else if(this.state.currentItem == 'reset-password-input') {
+      return (
+        <ResetPasswordInput changeItem={this.changeItem.bind(this)}></ResetPasswordInput>
+      )
     } else {
       return (
         <LoginForm changeItem={this.changeItem.bind(this)}></LoginForm>
@@ -75,22 +85,22 @@ class Login extends Component {
   render() {
     return (
         <div className="login-background"> 
-        <Container className="login-container">
-          <Row className="login-row">
-            <Col className="login-background-image-gradient" xs={7}>
-              <img className="login-background-image" src={loginBackground}></img>
-              <div className="login-user-thumb"></div>
-              <div className="logos-container">
-                <img className="login-logo-top" src={poweredBy}></img>
-                <img className="login-logo-bottom" src={vytracWhite}></img>
-              </div>           
-            </Col>
-            <Col className="login-form" xs={5}>
-              {this.showItem()}
-            </Col>
-          </Row>
-        </Container>
-      </div>
+          <Container className="login-container">
+            <Row className="login-row">
+              <Col className="login-background-image-gradient" xs={7}>
+                <img className="login-background-image" src={loginBackground}></img>
+                <div className="login-user-thumb"></div>
+                <div className="logos-container">
+                  <img className="login-logo-top" src={poweredBy}></img>
+                  <img className="login-logo-bottom" src={vytracWhite}></img>
+                </div>           
+              </Col>
+              <Col xs={5} className="login-form" xs={5}>
+                {this.showItem()}
+              </Col>
+            </Row>
+          </Container>
+        </div>
     );
   }
 }

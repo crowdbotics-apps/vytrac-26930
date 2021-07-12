@@ -9900,7 +9900,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 .login-background-image {
   width: 100%;
-  height: 500px;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -9950,15 +9950,15 @@ a.text-dark:hover, a.text-dark:focus {
   filter: drop-shadow(0px 5px 20px rgba(183, 197, 209, 0.6));
 }
 .login-container {
-  height: 500px;
-  width: 805px;
+  height: 50%;
+  width: 50%;
   background-color: #FFFFFF;
   filter: drop-shadow(0px 5px 20px rgba(183, 197, 209, 0.6));
   flex-direction: row;
 }
 .login-row {
-  height: 500px;
-  width: 805px;
+  height: 100%;
+  width: 100%;
 }
 .green-line {
   height:2px;
@@ -10003,6 +10003,9 @@ a.text-dark:hover, a.text-dark:focus {
 }
 .login-form {
   padding: 40px;
+  height: 100%;
+  width: 100%;
+  background-color: white;
 }
 .bold-blue {
   font-weight: bold;
@@ -10021,7 +10024,11 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 11px;
 }
 .username-label {
-  margin-top: 80px;
+  margin-top: 25%;
+  margin-bottom: 0px;
+}
+.password-label {
+  margin-top: 20px;
   margin-bottom: 0px;
 }
 .text-field {
@@ -10058,13 +10065,19 @@ a.text-dark:hover, a.text-dark:focus {
 .login-bottom-buttons-container {
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 35%;
   width: 100%;
 }
 .token-bottom-buttons-container {
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 45%;
+  width: 100%;
+}
+.token-bottom-buttons-container-smaller {
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 32%;
   width: 100%;
 }
 .greycheck {
@@ -10086,6 +10099,13 @@ a.text-dark:hover, a.text-dark:focus {
   flex: 1;
   text-align: center;
 }
+.centered {
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  flex: 1;
+  text-align: center;
+}
 .shield-logo {
   height: 62px;
   width: 50px;
@@ -10098,5 +10118,11 @@ a.text-dark:hover, a.text-dark:focus {
   text-align: center;
   background-color: #F8F9FB;
   margin: 0 auto;
+}
+.top25 {
+  margin-top: 25%;
+}
+.top25 {
+  margin-top: 15%;
 }
 /*# sourceMappingURL=bootstrap.css.map */

@@ -73,11 +73,11 @@ class LoginForm extends Component {
                 </div>
               </div>
 
-              <p className="text-left normal-text" style={{marginTop: 30}}>Security token</p>
+              <p className="text-left normal-text top25" style={{marginTop: 30}}>Security token</p>
 
               <p className="text-left smaller-text">Enter your 6 digit verification code sent to <b>user@email.com</b>. Didn’t receive your code yet? <a href="#">Send it again.</a></p>
 
-              <div className="vertical-container">
+              <div className="vertical-container centered top25">
                 <input autocomplete="off" onChange={(item) => {this.gotNumber(1); this.setState({number1: item})}} className="text-field-token" style={{marginLeft: 0}} type="text" name="number1" />
                 <input autocomplete="off" onChange={(item) => {this.gotNumber(2); this.setState({number2: item})}} className="text-field-token" type="text" name="number2" />
                 <input autocomplete="off" onChange={(item) => {this.gotNumber(3); this.setState({number3: item})}} className="text-field-token" type="text" name="number3" />
