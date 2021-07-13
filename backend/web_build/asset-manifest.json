@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.ece0f26d.chunk.css",
-    "main.js": "/static/js/main.58f675c6.chunk.js",
-    "main.js.map": "/static/js/main.58f675c6.chunk.js.map",
+    "main.css": "/static/css/main.bf4321eb.chunk.css",
+    "main.js": "/static/js/main.27701f38.chunk.js",
+    "main.js.map": "/static/js/main.27701f38.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6939623c.js",
     "runtime-main.js.map": "/static/js/runtime-main.6939623c.js.map",
     "static/js/2.ee51c7dd.chunk.js": "/static/js/2.ee51c7dd.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.4cfa8d42.chunk.js": "/static/js/3.4cfa8d42.chunk.js",
     "static/js/3.4cfa8d42.chunk.js.map": "/static/js/3.4cfa8d42.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.ece0f26d.chunk.css.map": "/static/css/main.ece0f26d.chunk.css.map",
+    "static/css/main.bf4321eb.chunk.css.map": "/static/css/main.bf4321eb.chunk.css.map",
     "static/js/2.ee51c7dd.chunk.js.LICENSE.txt": "/static/js/2.ee51c7dd.chunk.js.LICENSE.txt",
     "static/media/login_background.79d8f1be.png": "/static/media/login_background.79d8f1be.png",
     "static/media/vytrac_white.76b0c138.png": "/static/media/vytrac_white.76b0c138.png"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.6939623c.js",
     "static/js/2.ee51c7dd.chunk.js",
-    "static/css/main.ece0f26d.chunk.css",
-    "static/js/main.58f675c6.chunk.js"
+    "static/css/main.bf4321eb.chunk.css",
+    "static/js/main.27701f38.chunk.js"
   ]
 }
