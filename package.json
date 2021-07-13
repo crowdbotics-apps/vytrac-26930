@@ -8,7 +8,8 @@
     "postinstall": "npx jetify && rndebugger-open",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "build web": "yarn build"
   },
   "jest": {
     "preset": "react-native"
@@ -48,5 +49,19 @@
     "jest": "^26.4.2",
     "metro-react-native-babel-preset": "^0.58.0",
     "react-test-renderer": "16.11.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }
