@@ -9619,15 +9619,15 @@ button.bg-dark:focus {
 }
 
 .dynamic-font-heading {
-  font-size: 2vw;
+  font-size: 2vw !important;
 }
 
 .dynamic-font-normal {
-  font-size: 1vw;
+  font-size: 1vw !important;
 }
 
 .dynamic-font-small {
-  font-size: .5vw;
+  font-size: .5vw !important;
 }
 
 @media (min-width: 576px) {

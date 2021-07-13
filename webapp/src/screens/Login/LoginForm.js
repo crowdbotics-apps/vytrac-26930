@@ -34,14 +34,15 @@ class LoginForm extends Component {
   login() { 
     if(this.validate()) {
       try {
-        store.data.login(this.state.username + '', this.state.password + '').then((result) => {
+        console.log(this.state.username, this.state.password);
+        store.data.login(this.state.username, this.state.password).then((result) => {
           if(result) {
-            alert("Successful login!");
+            this.props.changeItem('login-token');
           } else {
-            alert("Could not login");
+            alert("Could not login:");
           }
         });
-        //this.props.changeItem('login-token');
+        
       } catch (ex) {
         alert("Could not login");
       }
@@ -68,9 +69,9 @@ class LoginForm extends Component {
             <p className="text-left dynamic-font-normal">Lorem ipsum dolor sit amet, cons cdipiscing elit. Duis non turpis nec nunc </p>
 
             <p className="grey-text username-label dynamic-font-normal">Username, Email or Phone number</p>
-            <input onChange={(username) => this.setState({username: username})} className="text-field" type="text" name="username" />
+            <input onChange={(username) => this.setState({username: username.target.value})} className="text-field dynamic-font-normal" type="text" name="username" />
             <p className="grey-text password-label dynamic-font-normal">Password</p>
-            <input onChange={(password) => this.setState({password: password})} className="text-field" type="password" name="password" />
+            <input onChange={(password) => this.setState({password: password.target.value})} className="text-field dynamic-font-normal" type="password" name="password" />
 
             <Row className="vertical-container remember-me">
               <Col style={{padding: 0, margin: 0}}  xs={12}>
