@@ -59,10 +59,10 @@ class LoginForm extends Component {
     return (
         <div> 
             <Row className="vertical-container">
-                <Col style={{padding: 0, margin: 0}}>
+                <Col className="line-container">
                   <div className="grey-line-inv"></div>
                 </Col>
-                <Col style={{padding: 0, margin: 0}}>
+                <Col className="line-container">
                   <div className="green-line-inv"></div>
                 </Col>
               </Row>  

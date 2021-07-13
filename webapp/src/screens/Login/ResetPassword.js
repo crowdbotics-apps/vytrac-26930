@@ -50,10 +50,10 @@ class ResetPassword extends Component {
     return (
         <div style={{height: '100%'}}> 
             <Row className="vertical-container">
-                <Col style={{padding: 0, margin: 0}}>
+                <Col className="line-container">
                   <div className="green-line"></div>
                 </Col>
-                <Col style={{padding: 0, margin: 0}}>
+                <Col className="line-container">
                   <div className="grey-line"></div>
                 </Col>
               </Row>  

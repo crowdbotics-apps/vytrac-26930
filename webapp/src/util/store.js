@@ -1,4 +1,4 @@
-const backendUrl = 'https://vytrac-26930.botics.co/';
+const backendUrl = 'https://vytrac-24106.botics.co/api/v1/';
 
 export class store {
 
@@ -37,9 +37,8 @@ class StoreConfig {
     async login(username, password) {
         var _this = this;
         const data = {
-            email: username,
-            password: password,
-            rememberMe: true
+            username: username,
+            password: password
         };
         return fetch(backendUrl + "login/", {
             method: 'POST',

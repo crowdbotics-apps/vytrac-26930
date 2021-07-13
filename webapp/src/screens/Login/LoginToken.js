@@ -59,10 +59,10 @@ class LoginForm extends Component {
     return (
         <div> 
             <Row className="vertical-container">
-                <Col style={{padding: 0, margin: 0}}>
+                <Col className="line-container">
                   <div className="grey-line-inv"></div>
                 </Col>
-                <Col style={{padding: 0, margin: 0}}>
+                <Col className="line-container">
                   <div className="green-line-inv"></div>
                 </Col>
               </Row>  
@@ -82,8 +82,7 @@ class LoginForm extends Component {
                 <input autocomplete="off" onChange={(item) => {this.gotNumber(2); this.setState({number2: item})}} className="text-field-token" type="text" name="number2" />
                 <input autocomplete="off" onChange={(item) => {this.gotNumber(3); this.setState({number3: item})}} className="text-field-token" type="text" name="number3" />
                 <input autocomplete="off" onChange={(item) => {this.gotNumber(4); this.setState({number4: item})}} className="text-field-token" type="text" name="number4" />
-                <input autocomplete="off" onChange={(item) => {this.gotNumber(5); this.setState({number5: item})}} className="text-field-token" type="text" name="number5" />
-                <input autocomplete="off" onChange={(item) => {this.gotNumber(6); this.setState({number6: item})}} className="text-field-token" style={{marginRight: 0}} type="text" name="number6" />
+                <input autocomplete="off" onChange={(item) => {this.gotNumber(6); this.setState({number6: item})}} className="text-field-token" style={{marginRight: 0}} type="text" name="number5" />
               </div>
 
               <div className="token-bottom-buttons-container">
