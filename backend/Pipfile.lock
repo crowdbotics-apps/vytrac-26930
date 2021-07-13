@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "d4c1e70291d42773c10c835b81dc5b02628566e4c5e83984a65ddc5c3e628173"
+            "sha256": "f8422026a8c07e73870a6b387469e58478fa961390066b2023428dedb6621e86"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -101,12 +101,13 @@
             ],
             "version": "==1.14.6"
         },
-        "chardet": {
+        "charset-normalizer": {
             "hashes": [
-                "sha256:0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa",
-                "sha256:f864054d66fd9118f2e67044ac8981a54775ec5b67aed0441892edb553d21da5"
+                "sha256:ad0da505736fc7e716a8da15bf19a985db21ac6415c26b34d2fafd3beb3d927e",
+                "sha256:b68b38179052975093d71c1b5361bf64afd80484697c1f27056e50593e695ceb"
             ],
-            "version": "==4.0.0"
+            "markers": "python_version >= '3'",
+            "version": "==2.0.1"
         },
         "coreapi": {
             "hashes": [
@@ -203,6 +204,14 @@
             "index": "pypi",
             "version": "==0.9.5"
         },
+        "django-sendgrid-v5": {
+            "hashes": [
+                "sha256:378e3bf8997b5c338ae934be2c894196037a45427d1ededa33f1234baf110731",
+                "sha256:869fb75f9e216a58f94f37cfad6990c6691e8c79994f0d7287ad37412d6b717d"
+            ],
+            "index": "pypi",
+            "version": "==0.9.1"
+        },
         "django-storages": {
             "hashes": [
                 "sha256:c823dbf56c9e35b0999a13d7e05062b837bae36c518a40255d522fbe3750fbb4",
@@ -249,12 +258,19 @@
             "index": "pypi",
             "version": "==0.3.11"
         },
+        "future": {
+            "hashes": [
+                "sha256:b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d"
+            ],
+            "version": "==0.18.2"
+        },
         "idna": {
             "hashes": [
-                "sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6",
-                "sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"
+                "sha256:14475042e284991034cb48e06f6851428fb14c4dc953acd9be9a5e95c7b6dd7a",
+                "sha256:467fbad99067910785144ce333826c71fb0e63a425657295239737f7ecd125f3"
             ],
-            "version": "==2.10"
+            "markers": "python_version >= '3'",
+            "version": "==3.2"
         },
         "importlib-metadata": {
             "hashes": [
@@ -474,6 +490,12 @@
             ],
             "version": "==2.8.1"
         },
+        "python-http-client": {
+            "hashes": [
+                "sha256:67e6a7bea19b03e14dc971480d3531b80becfc203d6c69478561bf7844d52661"
+            ],
+            "version": "==3.3.2"
+        },
         "python3-openid": {
             "hashes": [
                 "sha256:33fbf6928f401e0b790151ed2b5290b02545e8775f982485205a066f874aaeaf",
@@ -525,10 +547,10 @@
         },
         "requests": {
             "hashes": [
-                "sha256:27973dd4a904a4f13b263a19c866c13b92a39ed1c964655f025f3f8d3d75b804",
-                "sha256:c210084e36a42ae6b9219e00e48287def368a26d03a048ddad7bfee44f75871e"
+                "sha256:6c1246513ecd5ecd4528a0906f910e8f0f9c6b8ec72030dc9fd154dc1a6efd24",
+                "sha256:b8aa58f8cf793ffd8782d3d8cb19e66ef36f7aba4353eec859e74678b01b07a7"
             ],
-            "version": "==2.25.1"
+            "version": "==2.26.0"
         },
         "requests-oauthlib": {
             "hashes": [
@@ -578,6 +600,13 @@
             ],
             "version": "==0.4.2"
         },
+        "sendgrid": {
+            "hashes": [
+                "sha256:1c1cca97ab968f81af43ddbbe44aade5a689da27e3e4975dc366042499620abe",
+                "sha256:2558a8b2cf12677ceb99f8b611d914af5b9a2fd7ff3c0578e8299b4224e10071"
+            ],
+            "version": "==6.7.1"
+        },
         "six": {
             "hashes": [
                 "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926",
@@ -599,6 +628,12 @@
                 "sha256:0f91fd2e829c44362cbcfab3e9ae12e22badaa8a29ad5ff599f9ec109f0454e8"
             ],
             "version": "==0.4.1"
+        },
+        "starkbank-ecdsa": {
+            "hashes": [
+                "sha256:f7b434b4a1e0ba082fb1804b908b79523973fd17b1fde377078857f7cee299d1"
+            ],
+            "version": "==1.1.1"
         },
         "text-unidecode": {
             "hashes": [
