@@ -9,12 +9,9 @@ from rest_framework.routers import DefaultRouter
 
 # load api urls
 from home.api.v1.urls import router as home_router
-from assessments.api.v1.urls import router as assessments_router
 router = DefaultRouter()
 
 router.registry.extend(home_router.registry)
-router.registry.extend(assessments_router.registry)
-
 
 urlpatterns = [
     path("", include("home.urls")),
