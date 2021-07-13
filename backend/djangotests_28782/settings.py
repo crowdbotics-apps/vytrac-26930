@@ -92,7 +92,7 @@ ROOT_URLCONF = 'djangotests_28782.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'web_build')],
+        'DIRS': [os.path.join(BASE_DIR + '/web', 'web_build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -199,12 +199,17 @@ REST_AUTH_REGISTER_SERIALIZERS = {
 # Custom user model
 AUTH_USER_MODEL = "users.User"
 
-EMAIL_HOST = env.str("EMAIL_HOST", "smtp.sendgrid.net")
-EMAIL_HOST_USER = env.str("SENDGRID_USERNAME", "")
-EMAIL_HOST_PASSWORD = env.str("SENDGRID_PASSWORD", "")
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+# EMAIL_HOST = env.str("EMAIL_HOST", "smtp.sendgrid.net")
+# EMAIL_HOST_USER = env.str("SENDGRID_USERNAME", "")
+# EMAIL_HOST_PASSWORD = env.str("SENDGRID_PASSWORD", "")
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
 
+# Sendgrid
+EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+# todo -> add this key in .env
+SENDGRID_API_KEY = "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"
+SENDGRID_SANDBOX_MODE_IN_DEBUG=False
 
 # AWS S3 config
 AWS_ACCESS_KEY_ID = env.str("AWS_ACCESS_KEY_ID", "")
