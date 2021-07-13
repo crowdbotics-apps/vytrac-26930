@@ -56,42 +56,42 @@ class LoginForm extends Component {
   render() {
     return (
         <div style={{height: '100%'}}> 
-            <Row className="vertical-container">
-              <Col className="line-container">
-                <div className="green-line"></div>
-              </Col>
-              <Col className="line-container">
-                <div className="grey-line"></div>
-              </Col>
-            </Row>  
-            <p className="text-left">Welcome to <span className="bold-blue">VyTrac</span></p>
+          <Row className="vertical-container">
+            <Col className="line-container">
+              <div className="green-line"></div>
+            </Col>
+            <Col className="line-container">
+              <div className="grey-line"></div>
+            </Col>
+          </Row>  
+          <p className="text-left">Welcome to <span className="bold-blue text-bolder">VyTrac</span></p>
 
-            <p className="text-left dynamic-font-normal">Lorem ipsum dolor sit amet, cons cdipiscing elit. Duis non turpis nec nunc </p>
+          <p className="text-left dynamic-font-normal">Lorem ipsum dolor sit amet, cons cdipiscing elit. Duis non turpis nec nunc </p>
 
-            <p className="grey-text username-label dynamic-font-normal">Username, Email or Phone number</p>
-            <input onChange={(username) => this.setState({username: username.target.value})} className="text-field dynamic-font-normal" type="text" name="username" />
-            <p className="grey-text password-label dynamic-font-normal">Password</p>
-            <input onChange={(password) => this.setState({password: password.target.value})} className="text-field dynamic-font-normal" type="password" name="password" />
+          <p className="grey-text username-label dynamic-font-normal">Username, Email or Phone number</p>
+          <input onChange={(username) => this.setState({username: username.target.value})} className="text-field dynamic-font-normal" type="text" name="username" />
+          <p className="grey-text password-label dynamic-font-normal">Password</p>
+          <input onChange={(password) => this.setState({password: password.target.value})} className="text-field dynamic-font-normal" type="password" name="password" />
+          <p className="grey-text password-label dynamic-font-normal">Your time zone</p>
+          <input onChange={(timezone) => this.setState({timezone: timezone.target.value})} value={Intl.DateTimeFormat().resolvedOptions().timeZone} className="text-field dynamic-font-normal" name="timezone" />
 
-            <Row className="vertical-container remember-me">
-              <Col style={{padding: 0, margin: 0}}  xs={12}>
-                <input type="checkbox" className="greycheck dynamic-font-normal" />
-                <span className="grey-text dynamic-font-normal">&nbsp;&nbsp;&nbsp;&nbsp;Remember me</span>
-              </Col>
-            </Row> 
+          <Row className="vertical-container remember-me">
+            <Col style={{padding: 0, margin: 0}}  xs={12}>
+              <input type="checkbox" className="greycheck dynamic-font-normal" />
+              <span className="grey-text dynamic-font-normal">&nbsp;&nbsp;&nbsp;&nbsp;Remember me</span>
+            </Col>
+          </Row>
 
-            <div style={{height: '35%'}}></div> 
-
-            <Row>
-              <Col xs={2}>
-                <Button className="dynamic-font-normal" onClick={() => this.resetPassword()} style={{marginRight: '50%'}} variant="light">FORGOT PASSWORD</Button>
-              </Col>
-              <Col xs={8}>
-              </Col>
-              <Col xs={2}>
-                <Button className="dynamic-font-normal" onClick={() => this.login()}>LOGIN</Button>
-              </Col>
-            </Row>
+          <Row className="bottom-button-container">
+            <Col xs={2}>
+              <Button className="dynamic-font-normal text-bold" onClick={() => this.resetPassword()} style={{marginRight: '50%'}} variant="light">FORGOT PASSWORD</Button>
+            </Col>
+            <Col xs={8}>
+            </Col>
+            <Col xs={2}>
+              <Button className="dynamic-font-normal text-bold" onClick={() => this.login()}>LOGIN</Button>
+            </Col>
+          </Row>
         </div>
     );
   }
