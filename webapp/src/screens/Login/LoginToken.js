@@ -82,7 +82,7 @@ class LoginForm extends Component {
                 <input autocomplete="off" onChange={(item) => {this.gotNumber(2); this.setState({number2: item})}} className="text-field-token dynamic-font-huge" type="text" name="number2" />
                 <input autocomplete="off" onChange={(item) => {this.gotNumber(3); this.setState({number3: item})}} className="text-field-token dynamic-font-huge" type="text" name="number3" />
                 <input autocomplete="off" onChange={(item) => {this.gotNumber(4); this.setState({number4: item})}} className="text-field-token dynamic-font-huge" type="text" name="number4" />
-                <input autocomplete="off" onChange={(item) => {this.gotNumber(6); this.setState({number6: item})}} className="text-field-token dynamic-font-huge" style={{marginRight: 0}} type="text" name="number5" />
+                <input autocomplete="off" onChange={(item) => {this.gotNumber(6); this.setState({number5: item})}} className="text-field-token dynamic-font-huge" style={{marginRight: 0}} type="text" name="number5" />
               </div>
 
               <Row className="bottom-button-container">
@@ -92,7 +92,7 @@ class LoginForm extends Component {
                 <Col xs={8}>
                 </Col>
                 <Col xs={2}>
-                  <Button onClick={() => this.login()} className="dynamic-font-normal text-bold">CONTINUE</Button>
+                  <Button disabled={!this.state.number1 || !this.state.number2 || !this.state.number3 || !this.state.number4 || !this.state.number5 } onClick={() => this.login()} className="dynamic-font-normal text-bold">CONTINUE</Button>
                 </Col>
               </Row>
         </div>
