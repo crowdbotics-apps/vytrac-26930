@@ -14,7 +14,64 @@ class LoginForm extends Component {
   constructor(props) {
     store.init();
     super(props);
-    this.state = {}
+    this.state = {
+      validatePass1: '',
+      validatePass2: '',
+      validatePass1Text: '',
+      validatePass2Text: ''
+    }
+  }
+
+  validatePass1 (pass) {
+    console.log(pass);
+    if (!pass) {
+      this.setState({
+        validatePass1: 'red'
+      })
+    } else {
+      if (pass.length < 8) {
+        this.setState({
+          validatePass1: 'red',
+          validatePass1Text: 'Password must be 8 characters of length'
+        })
+      } else if (!(/\d/.test(pass))) {
+        this.setState({
+          validatePass1: 'red',
+          validatePass1Text: 'Password must contain at least one number'
+        })
+      } else if (!(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/g.test(pass))){
+        this.setState({
+          validatePass1: 'red',
+          validatePass1Text: 'Password must contain at least one special character'
+        })
+      } else {
+        this.setState({
+          validatePass1: '',
+          validatePass1Text: ''
+        })
+      }
+    }
+  }
+
+  validatePass2 (pass) {
+    console.log(pass, this.state.password1, this.state.password1 != pass)
+    if (!pass) {
+      this.setState({
+        validatePass2: 'red'
+      })
+    } else {
+      if(pass != this.state.password1) {
+        this.setState({
+          validatePass2: 'red',
+          validatePass2Text: 'Passwords must match'
+        })
+      } else {
+        this.setState({
+          validatePass2: '',
+          validatePass2Text: ''
+        })
+      }
+    }
   }
 
   validate () {
@@ -78,20 +135,21 @@ class LoginForm extends Component {
               <p className="text-left smaller-text dynamic-font-normal">Set your new password</p>
 
               <p className="grey-text password-label top15 dynamic-font-normal">Password</p>
-              <input onChange={(username) => this.setState({password1: username})} className="text-field" type="password" name="password1" />
-              <p className="grey-text password-label dynamic-font-small" style={{fontSize: 8, marginTop: 5}}>It must be 8 characters or more, have at least 1 number, 1 special character and 1 upper case</p>
+              <input style={{borderBottomColor: this.state.validatePass1}} onChange={(username) => { this.setState({password1: username.target.value}); this.validatePass1(username.target.value); }} className="text-field" type="password" name="password1" />
+              <p className="grey-text password-label dynamic-font-small" style={{fontSize: 8, marginTop: 5, color: this.state.validatePass1}}>{this.state.validatePass1Text}</p>
 
               <p className="grey-text password-label dynamic-font-normal">Confirm password</p>
-              <input onChange={(username) => this.setState({password2: username})} className="text-field" type="password" name="password2" />
+              <input style={{borderBottomColor: this.state.validatePass2}} onChange={(username) => { this.setState({password2: username.target.value});  this.validatePass2(username.target.value); }} className="text-field" type="password" name="password2" />
+              <p className="grey-text password-label dynamic-font-small" style={{fontSize: 8, marginTop: 5, color: this.state.validatePass2}}>{this.state.validatePass2Text}</p>
 
               <Row className="bottom-button-container">
                 <Col xs={2}>
-                  <Button onClick={() => this.props.changeItem('login')}  style={{marginRight: '55%'}}  variant="light" className="dynamic-font-normal text-bold">CANCEL</Button>
+                  <Button onClick={() => this.props.changeItem('login')} style={{marginRight: '55%'}}  variant="light" className="dynamic-font-normal text-bold">CANCEL</Button>
                 </Col>
                 <Col xs={7}>
                 </Col>
                 <Col xs={2}>
-                  <Button onClick={() => this.login()} className="dynamic-font-normal text-bold">CONTINUE</Button>
+                  <Button disabled={(this.state.validatePass1 != '' || this.state.validatePass2 != '') || (!this.state.password1 || !this.state.password2) } onClick={() => this.login()} className="dynamic-font-normal text-bold">CONTINUE</Button>
                 </Col>
               </Row>
         </div>
