@@ -7,9 +7,7 @@ import '../../App.css';
 
 import {store} from '../../util/store'
 
-import loginBackground from '../../assets/images/login_background.png';
-import poweredBy from '../../assets/images/powered_by.png';
-import vytracWhite from '../../assets/images/vytrac_white.png';
+import eyeIcon from '../../assets/icons/eye_open.png';
 
 class LoginForm extends Component {
 
@@ -73,7 +71,11 @@ class LoginForm extends Component {
           <p className="grey-text username-label dynamic-font-normal">Username, Email or Phone number</p>
           <input onChange={(username) => this.setState({username: username.target.value})} className="text-field dynamic-font-normal" type="text" name="username" />
           <p className="grey-text password-label dynamic-font-normal">Password</p>
-          <input onChange={(password) => this.setState({password: password.target.value})} className="text-field dynamic-font-normal" type={this.state.hidePass ? 'password' : 'text'} name="password" />
+          <div>
+            <input onChange={(password) => this.setState({password: password.target.value})} className="text-field dynamic-font-normal" type={this.state.hidePass ? 'password' : 'text'} name="password" />
+            <img className="textfield-button" resizeMode={'stretch'} onClick={() => this.setState({hidePass: !this.state.hidePass})} src={eyeIcon}></img>
+          </div>
+          
           <p className="grey-text password-label dynamic-font-normal">Your time zone</p>
           <input onChange={(timezone) => this.setState({timezone: timezone.target.value})} value={Intl.DateTimeFormat().resolvedOptions().timeZone} className="text-field dynamic-font-normal" name="timezone" />
 

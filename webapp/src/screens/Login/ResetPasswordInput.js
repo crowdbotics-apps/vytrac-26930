@@ -8,6 +8,7 @@ import '../../App.css';
 import {store} from '../../util/store'
 
 import passwordLogo from '../../assets/images/password.png';
+import eyeIcon from '../../assets/icons/eye_open.png';
 
 class LoginForm extends Component {
 
@@ -18,7 +19,9 @@ class LoginForm extends Component {
       validatePass1: '',
       validatePass2: '',
       validatePass1Text: '',
-      validatePass2Text: ''
+      validatePass2Text: '',
+      hidePass1: true,
+      hidePass2: true
     }
   }
 
@@ -135,11 +138,17 @@ class LoginForm extends Component {
               <p className="text-left smaller-text dynamic-font-normal">Set your new password</p>
 
               <p className="grey-text password-label top15 dynamic-font-normal">Password</p>
-              <input style={{borderBottomColor: this.state.validatePass1}} onChange={(username) => { this.setState({password1: username.target.value}); this.validatePass1(username.target.value); }} className="text-field" type="password" name="password1" />
+              <div>
+                <input style={{borderBottomColor: this.state.validatePass1}} onChange={(username) => { this.setState({password1: username.target.value}); this.validatePass1(username.target.value); }} className="text-field dynamic-font-normal" type={this.state.hidePass1 ? 'password' : 'text'} name="password1" />
+                <img className="textfield-button" resizeMode={'stretch'} onClick={() => this.setState({hidePass1: !this.state.hidePass1})} src={eyeIcon}></img>
+              </div>
               <p className="grey-text password-label dynamic-font-small" style={{fontSize: 8, marginTop: 5, color: this.state.validatePass1}}>{this.state.validatePass1Text}</p>
 
               <p className="grey-text password-label dynamic-font-normal">Confirm password</p>
-              <input style={{borderBottomColor: this.state.validatePass2}} onChange={(username) => { this.setState({password2: username.target.value});  this.validatePass2(username.target.value); }} className="text-field" type="password" name="password2" />
+              <div>
+                <input style={{borderBottomColor: this.state.validatePass2}} onChange={(username) => { this.setState({password2: username.target.value});  this.validatePass2(username.target.value); }} className="text-field dynamic-font-normal" type={this.state.hidePass2 ? 'password' : 'text'} name="password2" />
+                <img className="textfield-button" resizeMode={'stretch'} onClick={() => this.setState({hidePass2: !this.state.hidePass2})} src={eyeIcon}></img>
+              </div>
               <p className="grey-text password-label dynamic-font-small" style={{fontSize: 8, marginTop: 5, color: this.state.validatePass2}}>{this.state.validatePass2Text}</p>
 
               <Row className="bottom-button-container">
