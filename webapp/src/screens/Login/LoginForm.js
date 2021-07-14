@@ -428,15 +428,7 @@ class LoginForm extends Component {
   }
 
   validate () {
-    if (!this.state.username) {
-      alert("Please fill your username");
-      return false;
-    } else if (!this.state.password) {
-      alert("Please fill your password");
-      return false;
-    } else {
-      return true;
-    }
+    return true;
   }
 
   login() { 
@@ -480,7 +472,7 @@ class LoginForm extends Component {
       items = this.state.allTimeZones;
     } else {
       for (var i = 0; i < this.state.allTimeZones.length; i++) {
-        if(this.state.allTimeZones[i].includes(timezone)) {
+        if(this.state.allTimeZones[i].toUpperCase().includes(timezone.toUpperCase())) {
           items.push(this.state.allTimeZones[i])
         }
       }

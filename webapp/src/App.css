@@ -10165,6 +10165,7 @@ a.text-dark:hover, a.text-dark:focus {
   left: 15px;
   padding: 4%;
   width: 100%;
+  background-color: white;
 }
 .textfield-button {
   position: absolute;
