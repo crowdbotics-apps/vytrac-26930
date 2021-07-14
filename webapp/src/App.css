@@ -9630,6 +9630,10 @@ button.bg-dark:focus {
   font-size: .5vw !important;
 }
 
+.dynamic-font-huge {
+  font-size: 4vw !important;
+}
+
 @media (min-width: 576px) {
   .text-sm-left {
     text-align: left !important;
@@ -10065,7 +10069,7 @@ a.text-dark:hover, a.text-dark:focus {
 .text-field-token {
   border-width: 0px 0px 1px 0px;
   border-color: #D4E7FA;
-  width: 33px;
+  width: 10%;
   font-size: 11px;
   margin-top: 10px;
   padding: 5px;
@@ -10126,9 +10130,9 @@ a.text-dark:hover, a.text-dark:focus {
 }
 .logo-container {
   padding: 19px 25px 19px 25px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
+  width: 10%;
+  height: 10%;
+  border-radius: 2%;
   text-align: center;
   background-color: #F8F9FB;
   margin: 0 auto;

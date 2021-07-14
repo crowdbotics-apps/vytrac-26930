@@ -73,22 +73,28 @@ class LoginForm extends Component {
                 </div>
               </div>
 
-              <p className="text-left normal-text top25" style={{marginTop: 30}}>Security token</p>
+              <p className="text-left normal-text top25 dynamic-font-heading" style={{marginTop: 30}}>Security token</p>
 
-              <p className="text-left smaller-text">Enter your 6 digit verification code sent to <b>user@email.com</b>. Didn’t receive your code yet? <a href="#">Send it again.</a></p>
+              <p className="text-left smaller-text dynamic-font-normal">Enter your 6 digit verification code sent to <b>user@email.com</b>. Didn’t receive your code yet? <a href="#">Send it again.</a></p>
 
               <div className="vertical-container centered top25">
-                <input autocomplete="off" onChange={(item) => {this.gotNumber(1); this.setState({number1: item})}} className="text-field-token" style={{marginLeft: 0}} type="text" name="number1" />
-                <input autocomplete="off" onChange={(item) => {this.gotNumber(2); this.setState({number2: item})}} className="text-field-token" type="text" name="number2" />
-                <input autocomplete="off" onChange={(item) => {this.gotNumber(3); this.setState({number3: item})}} className="text-field-token" type="text" name="number3" />
-                <input autocomplete="off" onChange={(item) => {this.gotNumber(4); this.setState({number4: item})}} className="text-field-token" type="text" name="number4" />
-                <input autocomplete="off" onChange={(item) => {this.gotNumber(6); this.setState({number6: item})}} className="text-field-token" style={{marginRight: 0}} type="text" name="number5" />
+                <input autocomplete="off" onChange={(item) => {this.gotNumber(1); this.setState({number1: item})}} className="text-field-token dynamic-font-huge" style={{marginLeft: 0}} type="text" name="number1" />
+                <input autocomplete="off" onChange={(item) => {this.gotNumber(2); this.setState({number2: item})}} className="text-field-token dynamic-font-huge" type="text" name="number2" />
+                <input autocomplete="off" onChange={(item) => {this.gotNumber(3); this.setState({number3: item})}} className="text-field-token dynamic-font-huge" type="text" name="number3" />
+                <input autocomplete="off" onChange={(item) => {this.gotNumber(4); this.setState({number4: item})}} className="text-field-token dynamic-font-huge" type="text" name="number4" />
+                <input autocomplete="off" onChange={(item) => {this.gotNumber(6); this.setState({number6: item})}} className="text-field-token dynamic-font-huge" style={{marginRight: 0}} type="text" name="number5" />
               </div>
 
-              <div className="token-bottom-buttons-container">
-                <Button onClick={() => this.props.changeItem('login')}  style={{marginRight: '55%'}} variant="light">CANCEL</Button>
-                <Button onClick={() => this.login()}>CONTINUE</Button>
-              </div>
+              <Row className="bottom-button-container">
+                <Col xs={2}>
+                  <Button onClick={() => this.props.changeItem('login')}  className="dynamic-font-normal text-bold" style={{marginRight: '55%'}} variant="light">CANCEL</Button>
+                </Col>
+                <Col xs={8}>
+                </Col>
+                <Col xs={2}>
+                  <Button onClick={() => this.login()} className="dynamic-font-normal text-bold">CONTINUE</Button>
+                </Col>
+              </Row>
         </div>
     );
   }

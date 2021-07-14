@@ -77,7 +77,7 @@ class LoginForm extends Component {
 
           <Row className="vertical-container remember-me">
             <Col style={{padding: 0, margin: 0}}  xs={12}>
-              <input type="checkbox" className="greycheck dynamic-font-normal" />
+              <input type="checkbox" className="greycheck dynamic-font-normal" checked={this.state.rememberMe} onChange={() => this.setState({rememberMe: !this.state.rememberMe})} />
               <span className="grey-text dynamic-font-normal">&nbsp;&nbsp;&nbsp;&nbsp;Remember me</span>
             </Col>
           </Row>
