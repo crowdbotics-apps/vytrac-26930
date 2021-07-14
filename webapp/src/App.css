@@ -10125,22 +10125,26 @@ a.text-dark:hover, a.text-dark:focus {
   text-align: center;
 }
 .shield-logo {
-  height: 62px;
-  width: 50px;
+  height: 80%;
+  width: 80%;
 }
 .logo-container {
-  padding: 19px 25px 19px 25px;
-  width: 10%;
-  height: 10%;
-  border-radius: 2%;
+  padding: 5%;
+  width: 25%;
+  height: 25%;
+  margin-top: 200px;
+  border-radius: 50%;
   text-align: center;
   background-color: #F8F9FB;
   margin: 0 auto;
 }
+.top50 {
+  margin-top: 50%;
+}
 .top25 {
   margin-top: 25%;
 }
-.top25 {
+.top15 {
   margin-top: 15%;
 }
 .bold-text {

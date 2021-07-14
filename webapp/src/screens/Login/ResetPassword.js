@@ -60,21 +60,27 @@ class ResetPassword extends Component {
 
               <div className="centered-logo">
                 <div className="logo-container">
-                  <img className="shield-logo" src={passwordLogo}></img>
+                  <img className="shield-logo" resizeMode={'stretch'} src={passwordLogo}></img>
                 </div>
               </div>
 
-              <p className="text-left normal-text top25" style={{marginTop: 30}}>Forgot my password</p>
+              <p className="text-left normal-text top25 dynamic-font-heading" style={{marginTop: 30}}>Forgot my password</p>
 
-              <p className="text-left smaller-text">Enter the email you used to register your Vytrac account.</p>
+              <p className="text-left smaller-text dynamic-font-normal">Enter the email you used to register your Vytrac account.</p>
 
-              <p className="grey-text password-label top25">Email</p>
-              <input onChange={(username) => this.setState({username: username})} className="text-field" type="input" name="password" />
+              <p className="grey-text password-label top50 dynamic-font-normal">Email</p>
+              <input onChange={(username) => this.setState({username: username})} className="text-field dynamic-font-normal" type="input" name="password" />
 
-              <div className="token-bottom-buttons-container">
-                <Button onClick={() => this.props.changeItem('login')}  style={{marginRight: '55%'}} variant="light">CANCEL</Button>
-                <Button onClick={() => this.login()}>NEXT</Button>
-              </div>
+              <Row className="bottom-button-container">
+                <Col xs={2}>
+                  <Button onClick={() => this.props.changeItem('login')}  style={{marginRight: '55%'}} variant="light" className="dynamic-font-normal text-bold">CANCEL</Button>
+                </Col>
+                <Col xs={8}>
+                </Col>
+                <Col xs={2}>
+                  <Button onClick={() => this.login()} className="dynamic-font-normal text-bold">NEXT</Button>
+                </Col>
+              </Row>
         </div>
     );
   }

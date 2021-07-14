@@ -69,25 +69,31 @@ class LoginForm extends Component {
 
               <div className="centered-logo">
                 <div className="logo-container">
-                  <img className="shield-logo" src={passwordLogo}></img>
+                  <img className="shield-logo" resizeMode={'stretch'} src={passwordLogo}></img>
                 </div>
               </div>
 
-              <p className="text-left normal-text" style={{marginTop: 30}}>Reset my password</p>
+              <p className="text-left normal-text dynamic-font-heading" style={{marginTop: 30}}>Reset my password</p>
 
-              <p className="text-left smaller-text">Set your new password</p>
+              <p className="text-left smaller-text dynamic-font-normal">Set your new password</p>
 
-              <p className="grey-text password-label top25">Password</p>
+              <p className="grey-text password-label top25 dynamic-font-normal">Password</p>
               <input onChange={(username) => this.setState({password1: username})} className="text-field" type="password" name="password1" />
-              <p className="grey-text password-label" style={{fontSize: 8, marginTop: 5}}>It must be 8 characters or more, have at least 1 number, 1 special character and 1 upper case</p>
+              <p className="grey-text password-label dynamic-font-small" style={{fontSize: 8, marginTop: 5}}>It must be 8 characters or more, have at least 1 number, 1 special character and 1 upper case</p>
 
-              <p className="grey-text password-label top15">Confirm password</p>
+              <p className="grey-text password-label dynamic-font-normal">Confirm password</p>
               <input onChange={(username) => this.setState({password2: username})} className="text-field" type="password" name="password2" />
 
-              <div className="token-bottom-buttons-container-smaller">
-                <Button onClick={() => this.props.changeItem('login')}  style={{marginRight: '55%'}}  variant="light">CANCEL</Button>
-                <Button onClick={() => this.login()}>CONTINUE</Button>
-              </div>
+              <Row className="bottom-button-container">
+                <Col xs={2}>
+                  <Button onClick={() => this.props.changeItem('login')}  style={{marginRight: '55%'}}  variant="light" className="dynamic-font-normal text-bold">CANCEL</Button>
+                </Col>
+                <Col xs={8}>
+                </Col>
+                <Col xs={2}>
+                  <Button onClick={() => this.login()} className="dynamic-font-normal text-bold">CONTINUE</Button>
+                </Col>
+              </Row>
         </div>
     );
   }

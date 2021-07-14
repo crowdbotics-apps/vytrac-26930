@@ -69,7 +69,7 @@ class LoginForm extends Component {
 
               <div className="centered-logo">
                 <div className="logo-container">
-                  <img className="shield-logo" src={shieldLogo}></img>
+                  <img className="shield-logo" resizeMode={'stretch'} src={shieldLogo}></img>
                 </div>
               </div>
 
