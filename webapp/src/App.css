@@ -9984,7 +9984,7 @@ a.text-dark:hover, a.text-dark:focus {
   height:25%;
 }
 .green-line {
-  height:4px;
+  height:.5vh;
   margin-left: 23px;
   margin-right: 5px;
 
@@ -9994,7 +9994,7 @@ a.text-dark:hover, a.text-dark:focus {
   border-radius: 3px;
 }
 .grey-line {
-  height:4px;
+  height:.5vh;
 
   background: #D4E7FA;
   border-radius: 3px;
@@ -10003,14 +10003,14 @@ a.text-dark:hover, a.text-dark:focus {
   margin-left: 5px;
 }
 .grey-line-inv {
-  height:4px;
+  height:.5vh;
   margin-left: 23px;
   margin-right: 5px;
   border-radius: 3px;
   background: #D4E7FA;
 }
 .green-line-inv {
-  height:4px;
+  height:.5vh;
   border-radius: 3px;
 
   margin-right: 23px;

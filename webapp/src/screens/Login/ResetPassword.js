@@ -68,7 +68,7 @@ class ResetPassword extends Component {
 
               <p className="text-left smaller-text dynamic-font-normal">Enter the email you used to register your Vytrac account.</p>
 
-              <p className="grey-text password-label top50 dynamic-font-normal">Email</p>
+              <p className="grey-text password-label top25 dynamic-font-normal">Email</p>
               <input onChange={(username) => this.setState({username: username})} className="text-field dynamic-font-normal" type="input" name="password" />
 
               <Row className="bottom-button-container">

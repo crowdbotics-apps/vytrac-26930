@@ -77,7 +77,7 @@ class LoginForm extends Component {
 
               <p className="text-left smaller-text dynamic-font-normal">Set your new password</p>
 
-              <p className="grey-text password-label top25 dynamic-font-normal">Password</p>
+              <p className="grey-text password-label top15 dynamic-font-normal">Password</p>
               <input onChange={(username) => this.setState({password1: username})} className="text-field" type="password" name="password1" />
               <p className="grey-text password-label dynamic-font-small" style={{fontSize: 8, marginTop: 5}}>It must be 8 characters or more, have at least 1 number, 1 special character and 1 upper case</p>
 
@@ -88,7 +88,7 @@ class LoginForm extends Component {
                 <Col xs={2}>
                   <Button onClick={() => this.props.changeItem('login')}  style={{marginRight: '55%'}}  variant="light" className="dynamic-font-normal text-bold">CANCEL</Button>
                 </Col>
-                <Col xs={8}>
+                <Col xs={7}>
                 </Col>
                 <Col xs={2}>
                   <Button onClick={() => this.login()} className="dynamic-font-normal text-bold">CONTINUE</Button>
