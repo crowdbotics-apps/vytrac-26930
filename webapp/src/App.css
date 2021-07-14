@@ -10153,6 +10153,12 @@ a.text-dark:hover, a.text-dark:focus {
 .bolder-text {
   font-weight: bolder !important;
 }
+.position-front {
+  z-index: 5000;
+}
+.position-back {
+  z-index: -5000;
+}
 .bottom-button-container {
   position: absolute;
   bottom: 0px;

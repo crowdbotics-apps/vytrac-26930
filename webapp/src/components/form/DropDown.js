@@ -14,7 +14,7 @@ class DropDown extends Component {
   render() {
     let _this = this;
     return (
-      <div style={{ overflow: 'scroll', backgroundColor: 'white', marginTop: 0, height: this.props.height ? this.props.height : 200, maxHeight: this.props.height ? this.props.height : 200, borderBottomRightRadius: 5, borderBottomLeftRadius: 5, border: '1px solid #D4E7FA'}}>
+      <div className="position-front" style={{ overflow: 'scroll', backgroundColor: 'white', marginTop: 0, height: this.props.height ? this.props.height : 150, maxHeight: this.props.height ? this.props.height : 150, borderBottomRightRadius: 5, borderBottomLeftRadius: 5, border: '1px solid #D4E7FA'}}>
         {this.state.options.map((item, key) => {
           return (
             <div key={key} onClick={()=>_this.props.return(item)}>
