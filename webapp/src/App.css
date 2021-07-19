@@ -9953,10 +9953,10 @@ a.text-dark:hover, a.text-dark:focus {
   height: auto;
 }
 .login-user-thumb {
-  width: 123px;
-  height: 123px;
+  width: 225px;
+  height: 225px;
   background-color: #FFFFFF;
-  border-radius: 62px;
+  border-radius: 112px;
   
   position: absolute;
   top: 50%;
@@ -9967,6 +9967,26 @@ a.text-dark:hover, a.text-dark:focus {
   z-index: -4;
 
   filter: drop-shadow(0px 5px 20px rgba(183, 197, 209, 0.6));
+}
+.dashboard-user-thumb {
+  width: 50px;
+  height: 50px;
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%); 
+
+  z-index: -4;
+
+  filter: drop-shadow(0px 5px 20px rgba(183, 197, 209, 0.6));
+}
+.dashboard-user-thumb-container {
+  height: 117px;
+  padding: 25px;
 }
 .login-container {
   height: 100vh; /* For 100% screen height */
@@ -10176,5 +10196,19 @@ a.text-dark:hover, a.text-dark:focus {
   cursor: pointer;
   margin-top: 3%;
   margin-left: -4%;
+}
+.dashboard-menu {
+  height: 100vh;
+  padding: 0px;
+  align-items: flex-start;
+  background-color: #221F4E;
+}
+.dashboard-content {
+  padding: 0px;
+  height: 100vh;
+  overflow: scroll;
+}
+.dashboard {
+  font-family: "Barlow" !important;
 }
 /*# sourceMappingURL=bootstrap.css.map */

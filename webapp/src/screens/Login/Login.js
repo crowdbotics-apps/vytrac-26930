@@ -3,6 +3,8 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import { withRouter } from "react-router-dom";
+
 import '../../App.css';
 
 import {store} from '../../util/store'
@@ -86,7 +88,7 @@ class Login extends Component {
     return (
       <Container className="login-container">
         <Row className="login-row">
-          <Col className="login-background-image-gradient" xs={7}>
+          <Col className="login-background-image-gradient" xs={6}>
             <img className="login-background-image" src={loginBackground}></img>
             <div className="login-user-thumb"></div>
             <div className="logos-container">
@@ -94,7 +96,7 @@ class Login extends Component {
               <img className="login-logo-bottom" src={vytracWhite}></img>
             </div>           
           </Col>
-          <Col xs={5} className="login-form" xs={5}>
+          <Col xs={5} className="login-form" xs={6}>
             {this.showItem()}
           </Col>
         </Row>
@@ -103,4 +105,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default withRouter(Login);

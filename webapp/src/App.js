@@ -1,9 +1,17 @@
 import React, { Component, View } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  withRouter
+} from "react-router-dom";
+
 import './App.css';
 
 import {store} from './util/store'
 
 import Login from './screens/Login/Login'
+import ProviderDashboard from './screens/ProviderDashboard/ProviderDashboard'
 
 class App extends Component {
 
@@ -43,9 +51,20 @@ class App extends Component {
 
   render() {
     return (
-      <Login></Login>
+      <Router>
+        <div>
+          <Switch>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/dashboard">
+              <ProviderDashboard />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
