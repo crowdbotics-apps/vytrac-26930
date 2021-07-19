@@ -104,12 +104,6 @@ This project is set up to run using [Docker Compose](https://docs.docker.com/com
 3. Run `python manage.py migrate`
 4. Run `python manage.py runserver`
 
-# Usage
-
-## Admin Panel
-
-Admin Panel can be accessed through http://localhost:8000/admin/. If you are the Project Owner, admin credentials can be generated from App > Settings on [Crowdbotics App Dashboard](https://app.crowdbotics.com/). If not, please request your PM or Project Owner to generate admin credentials and share with you.
-
-## API Documentation
-
-API Documentation is generated automatically and can be access through http://localhost:8000/api-docs/. Please make sure you are signed in to the admin panel before navigating to this page.
+### code readably
+1. tests files
+2. functions/classes description
