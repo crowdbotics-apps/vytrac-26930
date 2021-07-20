@@ -70,6 +70,7 @@ class SetNewPasswordSerializer(PasswordValidatorSer, serializers.Serializer):
         min_length=1, write_only=True)
 
     class Meta:
+        model = User
         fields = ['password', 'token', 'uidb64']
 
     def validate(self, attrs):

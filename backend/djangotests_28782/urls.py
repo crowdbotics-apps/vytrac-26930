@@ -1,18 +1,15 @@
-"""djangotests_28782 URL Configuration
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib import admin
+from django.urls import include, path
+from drf_yasg import openapi
+from drf_yasg.views import get_schema_view
+from rest_framework import permissions, generics
+from rest_framework.documentation import include_docs_urls
+from rest_framework_simplejwt.tokens import RefreshToken
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
+from users.models import User
+
 
 from django.contrib import admin
 from django.urls import path, include, re_path
@@ -40,11 +37,70 @@ admin.site.site_header = "DjangoTests"
 admin.site.site_title = "DjangoTests Admin Portal"
 admin.site.index_title = "DjangoTests Admin"
 
+description = """
+# [lookups](https://docs.djangoproject.com/en/3.2/ref/models/lookups/)
+1. `gt` = greater than
+2. `lt` = less than
+3. `e` = or equal 'this can be used `__gte` which mean greater than or equal to' or you can say `lte` which mean less than or equal to  
+4. `contains` = this can be used for list like '?groups__contains=providers' in which groups=['doctors','providers']
+4. `in` = this check if one value is in many values just the opposite way of contains,
+    - example
+     1. `user__in=[1,2,3]`
+     2. `user__username__in=AliJesusNikolina` you can also check if string is part of a bigger string  
+
+5. `fieldname__sumfielname` = this used for subfields like you can say `column__name=anyname` to get all columns with subobjs that have name = anyname 
+        - example
+
+                ```
+                {
+                "column":{
+                    "name":"anyname","value":"anyvalue"
+                }
+                }
+                ```
+6. `name__icontains` i stand for "case insensitive"
+6. 'ordering`.
+    - example1 `?ordering=-id` you will get the order object flipped
+    - example2 `?ordering=name` you will get the objects order alphabetically A-Z by the filed called `name`
+    - example3 `?ordering=-name` you will get the objects order alphabetically Z-A by the filed called `name`
+6. you can add `latest=true`, `earliest=true` to get the latest or earliest object in case it have a field `date_created`
+7. `fields=<fieldname>,<fieldname><..>`,
+    - example: `?fields=username,id,` this will filter out all other fields 
+
+
+
+# headers
+- authentication
+        ```
+        headers = {
+        'Authorization': 'Bearer <token>',
+        }
+        ```
+"""
+
+user = None
+try:
+    user = User.objects.earliest()
+except:
+    pass
+
+try:
+    token = RefreshToken.for_user(user).access_token
+    description += f"""
+# dummy login
+    - `username = {user.username}`
+    - `password = password`
+    - `token={str(token)}`
+"""
+except:
+    pass
+
+
 # swagger
 api_info = openapi.Info(
     title="DjangoTests API",
     default_version="v1",
-    description="API documentation for DjangoTests App",
+    description=description,
 )
 
 schema_view = get_schema_view(
@@ -54,7 +110,8 @@ schema_view = get_schema_view(
 )
 
 urlpatterns += [
-    path("docs/", schema_view.with_ui("swagger", cache_timeout=0), name="api_docs")
+    path("swagger/", schema_view.with_ui("swagger", cache_timeout=0), name="api_docs"),
+    path('docs/', include_docs_urls(title='VYTRAC🏥', description=description)),
 ]
 
 
