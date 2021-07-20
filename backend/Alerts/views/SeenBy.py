@@ -1,0 +1,25 @@
+from .. import models
+from Functions.DynamicSer import DynamicSerializer
+from Functions.MyViews import ItemView, ItemsView
+
+MyModel = models.SeeAlert
+
+
+class ModelSer(DynamicSerializer):
+    class Meta:
+        model = MyModel
+        fields = '__all__'
+
+
+class Views(ItemsView):
+    """
+    # the useres who sow these alerts with dates and durations of response
+    """
+    queryset = MyModel.objects.all()
+    serializer_class = ModelSer
+
+
+class View(ItemView):
+    MyModel = MyModel
+    queryset = MyModel.objects.all()
+    serializer_class = ModelSer

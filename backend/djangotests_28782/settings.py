@@ -16,26 +16,32 @@ import logging
 from modules.manifest import get_modules
 
 env = environ.Env()
+is_deployed = env.str("DATABASE_URL", default=None)
+GOOGLE_API_KEY = 'AIzaSyD--your-google-maps-key-SjQBE'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DEBUG", default=False)
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env.str("SECRET_KEY")
+#
+SECRET_KEY = 'mystupidsecretkey'
+if is_deployed:
+    SECRET_KEY = env.str("SECRET_KEY")
 
-ALLOWED_HOSTS = env.list("HOST", default=["*"])
+
+# ALLOWED_HOSTS = env.list("HOST", default=["*"])
+ALLOWED_HOSTS = ['*', '0.0.0.0', '127.0.0.1']
 SITE_ID = 1
 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 SECURE_SSL_REDIRECT = env.bool("SECURE_REDIRECT", default=False)
-
 
 # Application definition
 
@@ -50,11 +56,21 @@ INSTALLED_APPS = [
 ]
 LOCAL_APPS = [
     'home',
-    'users.apps.UsersConfig',
+    # 'users.apps.UsersConfig',
+    "users",
+    'timesheets',
+    'archive',
+    # 'chat',
+    'Alerts',
+    'calendars',
+    'patients',
+    'automations',
+    'permissions',
+    "tasks",
+    'Functions.MyAppsConfig.YourAppConfig',
 ]
 THIRD_PARTY_APPS = [
     'rest_framework',
-    'rest_framework.authtoken',
     'rest_auth',
     'rest_auth.registration',
     'bootstrap4',
@@ -70,6 +86,12 @@ THIRD_PARTY_APPS = [
     # start fcm_django push notifications
     'fcm_django',
     # end fcm_django push notifications
+    'channels',
+    'safedelete',
+    'rest_framework_simplejwt.token_blacklist',
+    'django_celery_beat',
+    'django_celery_results',
+
 
 ]
 MODULES_APPS = get_modules()
@@ -109,23 +131,39 @@ TEMPLATES = [
 CORS_ALLOW_ALL_ORIGINS = True
 
 WSGI_APPLICATION = 'djangotests_28782.wsgi.application'
-
+ASGI_APPLICATION = "djangotests_28782.asgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+is_deployed = False
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
-if env.str("DATABASE_URL", default=None):
+if is_deployed:
+    print('========================== docker mode ==========================')
     DATABASES = {
         'default': env.db()
     }
+else:
+    print('========================== classic mode ==========================')
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+            'OPTIONS': {
+                'timeout': 20,  # in seconds
+                # see also
+                # https://docs.python.org/3.7/library/sqlite3.html#sqlite3.connect
+            },
+            'TEST': {
+                'NAME': os.path.join(BASE_DIR, "db_test.sqlite3"),
+                'OPTIONS': {
+                    'timeout': 100,  # in seconds
+                    # see also
+                    # https://docs.python.org/3.7/library/sqlite3.html#sqlite3.connect
+                },
+            },
 
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -145,7 +183,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -154,7 +191,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
@@ -199,17 +235,18 @@ REST_AUTH_REGISTER_SERIALIZERS = {
 # Custom user model
 AUTH_USER_MODEL = "users.User"
 
-# EMAIL_HOST = env.str("EMAIL_HOST", "smtp.sendgrid.net")
-# EMAIL_HOST_USER = env.str("SENDGRID_USERNAME", "")
-# EMAIL_HOST_PASSWORD = env.str("SENDGRID_PASSWORD", "")
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_HOST = 'smtp.gmail.com'  # TODO env.str("EMAIL_HOST", "smtp.sendgrid.net")
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'crowboticstest@gmail.com'  # TODO env.str("SENDGRID_USERNAME", "")
+EMAIL_HOST_PASSWORD = 'my@NewPassword'  # TODO env.str("SENDGRID_PASSWORD", "")
 
 # Sendgrid
 EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 # todo -> add this key in .env
 SENDGRID_API_KEY = "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"
-SENDGRID_SANDBOX_MODE_IN_DEBUG=False
+SENDGRID_SANDBOX_MODE_IN_DEBUG = False
 
 # AWS S3 config
 AWS_ACCESS_KEY_ID = env.str("AWS_ACCESS_KEY_ID", "")
@@ -218,10 +255,10 @@ AWS_STORAGE_BUCKET_NAME = env.str("AWS_STORAGE_BUCKET_NAME", "")
 AWS_STORAGE_REGION = env.str("AWS_STORAGE_REGION", "")
 
 USE_S3 = (
-    AWS_ACCESS_KEY_ID and
-    AWS_SECRET_ACCESS_KEY and
-    AWS_STORAGE_BUCKET_NAME and
-    AWS_STORAGE_REGION
+        AWS_ACCESS_KEY_ID and
+        AWS_SECRET_ACCESS_KEY and
+        AWS_STORAGE_BUCKET_NAME and
+        AWS_STORAGE_REGION
 )
 
 if USE_S3:
@@ -236,8 +273,6 @@ if USE_S3:
     MEDIA_URL = '/mediafiles/'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
-
-
 # start fcm_django push notifications
 FCM_DJANGO_SETTINGS = {
     "FCM_SERVER_KEY": env.str("FCM_SERVER_KEY", "")
@@ -251,7 +286,30 @@ SWAGGER_SETTINGS = {
 }
 
 # if DEBUG or not (EMAIL_HOST_USER and EMAIL_HOST_PASSWORD):
-    # output email to console instead of sending
+# output email to console instead of sending
 #     if not DEBUG:
 #         logging.warning("You should setup `SENDGRID_USERNAME` and `SENDGRID_PASSWORD` env vars to send emails.")
 #     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+host = os.environ.get('REDIS_URL', 'redis://localhost:6379') if is_deployed else ('0.0.0.0', 6379)
+CHANNEL_LAYERS = {
+    'default': {
+        # "BACKEND": "channels.layers.InMemoryChannelLayer",
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [host],
+        },
+    },
+}
+
+REDIS_URL = [host]
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SAFE_DELETE_INTERPRET_UNDELETED_OBJECTS_AS_CREATED = True
+
+CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = TIME_ZONE

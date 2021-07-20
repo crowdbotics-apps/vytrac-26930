@@ -24,15 +24,16 @@ from drf_yasg import openapi
 
 urlpatterns = [
     path("", include("home.urls")),
-    path("accounts/", include("allauth.urls")),
-    path("modules/", include("modules.urls")),
-    path("api/v1/", include("home.api.v1.urls")),
-    path("admin/", admin.site.urls),
-    path("users/", include("users.urls", namespace="users")),
-    path("rest-auth/", include("rest_auth.urls")),
-    # Override email confirm to use allauth's HTML view instead of rest_auth's API view
-    path("rest-auth/registration/account-confirm-email/<str:key>/", confirm_email),
-    path("rest-auth/registration/", include("rest_auth.registration.urls")),
+    path('admin/', admin.site.urls),
+    path('users/', include('users.urls')),
+    path('calendars/', include('calendars.urls')),
+    path('patient/', include('patients.urls')),
+    path('groups/', include('permissions.urls')),
+    path('statistics/', include('timesheets.urls')),
+    path('tasks/', include('tasks.urls')),
+    path('automation/', include('automations.urls')),
+    path('alerts/', include('Alerts.urls')),
+    path('archive/', include('archive.urls')),
 ]
 
 admin.site.site_header = "DjangoTests"
@@ -53,7 +54,7 @@ schema_view = get_schema_view(
 )
 
 urlpatterns += [
-    path("api-docs/", schema_view.with_ui("swagger", cache_timeout=0), name="api_docs")
+    path("docs/", schema_view.with_ui("swagger", cache_timeout=0), name="api_docs")
 ]
 
 

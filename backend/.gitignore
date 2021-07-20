@@ -1,3 +1,9 @@
+/env
+/vscode
+/Crowdbotics.pdf
+/VyTrac-Provider-Scope.pptx
+/VyTrac-Timeline.pdf
+/secrets.txt
 *.pyc
 env/
 .terraform
