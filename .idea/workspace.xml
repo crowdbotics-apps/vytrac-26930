@@ -20,576 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="526e06ab-6277-4307-bb54-3f7169b78ac1" name="Default Changelist" comment="conf FE">
-      <change beforePath="$PROJECT_DIR$/.buckconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.circleci/webhook_callback.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flowconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.watchmanconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__tests__/App-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/Gemfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/Gemfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/_BUCK" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build_defs.bzl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/debug.keystore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/debug/java/com/delicate_hall_24106/ReactNativeFlipper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/AntDesign.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/CrimsonText-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/CrimsonText-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/CrimsonText-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/CrimsonText-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Entypo.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/EvilIcons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Feather.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/FontAwesome.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/FontAwesome5_Brands.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/FontAwesome5_Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/FontAwesome5_Solid.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Fontisto.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Foundation.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Ionicons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Lato-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Lato-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Lato-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Lato-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/MaterialCommunityIcons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/MaterialIcons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Merriweather-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Merriweather-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Merriweather-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Merriweather-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Montserrat-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Montserrat-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Montserrat-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Montserrat-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Nunito-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Nunito-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Nunito-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Nunito-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Octicons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/OpenSans-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/OpenSans-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/OpenSans-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/OpenSans-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/PlayfairDisplay-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/PlayfairDisplay-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/PlayfairDisplay-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/PlayfairDisplay-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Righteous-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Roboto-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Roboto-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Roboto-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Roboto-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Roboto-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Roboto-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/RobotoMono-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/RobotoMono-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/RobotoMono-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/RobotoMono-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/SimpleLineIcons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/Zocial.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/fonts/icomoon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/com/delicate_hall_24106/MainActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/com/delicate_hall_24106/MainApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/fastlane/Appfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/fastlane/Fastfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/fastlane/Pluginfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/fastlane/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Alerts/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Alerts/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Alerts/tests/tast_celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Alerts/tests/tast_celery.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Alerts/tests/test_websocket.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Alerts/tests/test_websocket.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Functions/TestClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Functions/TestClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/djangotests_28782/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vytrac_26930/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/djangotests_28782/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vytrac_26930/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/djangotests_28782/celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vytrac_26930/celery.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/djangotests_28782/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vytrac_26930/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/djangotests_28782/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vytrac_26930/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/djangotests_28782/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vytrac_26930/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/docker-compose.override.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/docker-compose.override.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/vytrac_26930/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vytrac_26930/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/web_build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/web_build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/heroku.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Gemfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Gemfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Podfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106-tvOS/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106-tvOSTests/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106.xcodeproj/project.pbxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106.xcodeproj/xcshareddata/xcschemes/delicate_hall_24106-tvOS.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106.xcodeproj/xcshareddata/xcschemes/delicate_hall_24106.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106/AppDelegate.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106/AppDelegate.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106/Base.lproj/LaunchScreen.xib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106/Images.xcassets/AppIcon-1.appiconset/1024.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106/Images.xcassets/AppIcon-1.appiconset/114.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106/Images.xcassets/AppIcon-1.appiconset/120.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106/Images.xcassets/AppIcon-1.appiconset/180.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106/Images.xcassets/AppIcon-1.appiconset/29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106/Images.xcassets/AppIcon-1.appiconset/40.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106/Images.xcassets/AppIcon-1.appiconset/57.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106/Images.xcassets/AppIcon-1.appiconset/58.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106/Images.xcassets/AppIcon-1.appiconset/60.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106/Images.xcassets/AppIcon-1.appiconset/80.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106/Images.xcassets/AppIcon-1.appiconset/87.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106/Images.xcassets/AppIcon-1.appiconset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106/Images.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106/Images.xcassets/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106/main.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106Tests/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/delicate_hall_24106Tests/delicate_hall_24106Tests.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/fastlane/Appfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/fastlane/Fastfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/fastlane/Matchfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/fastlane/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metro.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-native.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/CrimsonText-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/CrimsonText-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/CrimsonText-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/CrimsonText-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Lato-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Lato-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Lato-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Lato-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Merriweather-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Merriweather-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Merriweather-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Merriweather-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Montserrat-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Montserrat-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Montserrat-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Montserrat-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Nunito-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Nunito-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Nunito-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Nunito-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/OpenSans-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/OpenSans-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/OpenSans-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/OpenSans-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/PlayfairDisplay-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/PlayfairDisplay-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/PlayfairDisplay-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/PlayfairDisplay-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Righteous-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/RobotoMono-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/RobotoMono-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/RobotoMono-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/RobotoMono-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/fontawesome.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/icomoon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/americanExpressIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/americanExpressIcon@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/americanExpressIcon@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/iconPlus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/iconPlus@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/iconPlus@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/masterCardIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/masterCardIcon@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/masterCardIcon@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/sendIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/sendIcon@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/sendIcon@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/visaIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/visaIcon@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/visaIcon@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/backgroundLoginV1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/backgroundLoginV1@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/backgroundLoginV1@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/backgroundLoginV1DarkTheme.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/backgroundLoginV1DarkTheme@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/backgroundLoginV1DarkTheme@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/darkThemeImage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/darkThemeImage@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/darkThemeImage@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/kittenImage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/kittenImage@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/kittenImage@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/kittenImageDark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/kittenImageDark@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/kittenImageDark@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/lightThemeImage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/lightThemeImage@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/lightThemeImage@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/logo@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/logo@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/logoDark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/logoDark@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/logoDark@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/screensImage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/screensImage@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/screensImage@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/screensImageDark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/screensImageDark@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/screensImageDark@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/smallLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/smallLogo@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/smallLogo@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/smallLogoDark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/smallLogoDark@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/smallLogoDark@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/splashBack.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/splashBack@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/splashBack@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ErrorBox/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ErrorBox/styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/installed_blueprints.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/navigation/propTypes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/dataGenerator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/Image1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/Image10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/Image11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/Image12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/Image2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/Image3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/Image4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/Image5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/Image6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/Image7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/Image8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/Image9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/avatars/Image1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/avatars/Image10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/avatars/Image11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/avatars/Image12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/avatars/Image2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/avatars/Image3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/avatars/Image4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/avatars/Image5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/avatars/Image6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/avatars/Image7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/avatars/Image8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/avatars/Image9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/photo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/photo17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/photo18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/photo19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/photo2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/photo20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/photo3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/photo32.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/photo4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/photo45.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/photo46.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/photo47.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/photo48.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/photo49.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/photo5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/img/photo6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/raw/articles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/raw/cards.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/raw/conversations.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/raw/notifications.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/raw/users.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen0200297/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen0200297/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen100201182/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen100201182/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen101201183/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen101201183/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen10200307/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen10200307/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen102201245/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen102201245/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen11200308/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen11200308/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen1200298/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen1200298/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen12200309/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen12200309/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen13200310/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen13200310/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen15200312/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen15200312/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen16200317/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen16200317/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen17200323/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen17200323/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen18200326/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen18200326/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen19200350/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen19200350/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen20200351/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen20200351/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen2200299/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen2200299/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen22200488/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen22200488/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen23200489/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen23200489/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen24200539/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen24200539/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen27200542/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen27200542/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen28200614/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen28200614/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen29200632/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen29200632/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen30200633/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen30200633/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen31200634/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen31200634/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen3200300/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen3200300/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen32200635/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen32200635/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen33200636/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen33200636/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen34200651/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen34200651/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen4200301/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen4200301/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen5200302/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen5200302/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen6200303/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen6200303/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen64200683/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen64200683/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen65200684/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen65200684/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen66200685/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen66200685/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen67200686/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen67200686/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen68200687/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen68200687/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen69200688/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen69200688/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen7200304/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen7200304/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen74200694/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen74200694/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen76200696/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen76200696/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen77200697/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen77200697/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen78200698/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen78200698/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen79200699/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen79200699/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen80200700/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen80200700/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen81200701/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen81200701/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen8200305/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen8200305/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen82200702/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen82200702/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen83200703/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen83200703/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen84200706/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen84200706/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen85200707/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen85200707/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen86200722/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen86200722/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen87200723/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen87200723/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen88200724/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen88200724/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen89200725/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen89200725/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen90200726/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen90200726/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen91200727/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen91200727/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen9200306/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen9200306/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen92200728/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen92200728/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen93200729/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen93200729/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen94200730/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen94200730/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen95200731/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen95200731/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen96200732/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen96200732/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen97201179/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen97201179/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen98201180/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen98201180/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen99201181/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BlankScreen99201181/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200652/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200652/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200653/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200653/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200654/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200654/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200655/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200655/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200656/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200656/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200657/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200657/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200658/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200658/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200659/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200659/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200660/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200660/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200661/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200661/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200662/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200662/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200663/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200663/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200664/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200664/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200665/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200665/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200666/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200666/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200667/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200667/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200668/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200668/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200669/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200669/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200670/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200670/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200671/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200671/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200672/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200672/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200673/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200673/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200674/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200674/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200675/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200675/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200676/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200676/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200677/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200677/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200678/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200678/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200679/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200679/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200680/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200680/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200681/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200681/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200682/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen34200682/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen80200733/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfBlankScreen80200733/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfCopyOfBlankScreen34200690/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfCopyOfBlankScreen34200690/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfCopyOfBlankScreen34200691/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfCopyOfBlankScreen34200691/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfCopyOfBlankScreen34200692/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfCopyOfBlankScreen34200692/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfCopyOfBlankScreen34200693/navigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/CopyOfCopyOfBlankScreen34200693/screens/blank.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/SplashScreen/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/SplashScreen/styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigator/NavigationService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigator/mainNavigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigator/sideMenu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigator/slideMenuIcon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/mainReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/mainSaga.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/constants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/custom/actions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/custom/constants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/custom/reducers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/custom/sagas.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/custom/services.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/sagas.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/services.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/http.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/scale.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/textUtil.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/assets/icons/arrow_down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/assets/icons/eye_open.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/assets/images/login_background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/assets/images/password.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/assets/images/powered_by.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/assets/images/secure-shield.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/assets/images/vytrac_white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/components/form/DropDown.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/screens/Login/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/screens/Login/LoginForm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/screens/Login/LoginToken.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/screens/Login/ResetPassword.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/screens/Login/ResetPasswordInput.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/screens/ProviderDashboard/ProviderDashboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/util/store.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -628,6 +69,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/home/templates" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -635,14 +77,14 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend/home/templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.vytrac-26930">
+  <component name="RunManager" selected="Docker.compose">
     <configuration name="tests" type="DjangoTestsConfigurationType">
       <module name="vytrac-26930" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -720,7 +162,7 @@
       <workItem from="1626877258011" duration="64000" />
       <workItem from="1626877496106" duration="2759000" />
       <workItem from="1626880340721" duration="2272000" />
-      <workItem from="1626882640106" duration="601000" />
+      <workItem from="1626882640106" duration="1618000" />
     </task>
     <task id="LOCAL-00001" summary="0">
       <created>1626877902791</created>
@@ -775,30 +217,30 @@
     <option name="LAST_COMMIT_MESSAGE" value="conf FE" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1236" height="229" key="GridCell.Tab.0.bottom" timestamp="1626883196843">
+    <state width="1236" height="229" key="GridCell.Tab.0.bottom" timestamp="1626883568912">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1236" height="229" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1626883196843" />
-    <state width="1236" height="229" key="GridCell.Tab.0.center" timestamp="1626883196842">
+    <state width="1236" height="229" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1626883568912" />
+    <state width="1236" height="229" key="GridCell.Tab.0.center" timestamp="1626883568911">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1236" height="229" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1626883196842" />
-    <state width="1236" height="229" key="GridCell.Tab.0.left" timestamp="1626883196842">
+    <state width="1236" height="229" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1626883568911" />
+    <state width="1236" height="229" key="GridCell.Tab.0.left" timestamp="1626883568910">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1236" height="229" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1626883196842" />
-    <state width="1236" height="229" key="GridCell.Tab.0.right" timestamp="1626883196843">
+    <state width="1236" height="229" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1626883568910" />
+    <state width="1236" height="229" key="GridCell.Tab.0.right" timestamp="1626883568911">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1236" height="229" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1626883196843" />
-    <state x="149" y="39" key="SettingsEditor" timestamp="1626882948938">
+    <state width="1236" height="229" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1626883568911" />
+    <state x="149" y="39" key="SettingsEditor" timestamp="1626883404709">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1626882948938" />
-    <state x="341" y="155" width="598" height="548" key="find.popup" timestamp="1626882810218">
+    <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1626883404709" />
+    <state x="341" y="155" width="670" height="548" key="find.popup" timestamp="1626883361520">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="341" y="155" width="598" height="548" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1626882810218" />
+    <state x="341" y="155" width="670" height="548" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1626883361520" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/vytrac_26930$tests.coverage" NAME="tests Coverage Results" MODIFIED="1626882428141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

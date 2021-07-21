@@ -5,11 +5,7 @@ services:
     depends_on:
       - postgres
       - redis
-#      - rabbitmq
   postgres:
     image: postgres:12
   redis:
     image: redis
-#  rabbitmq:
-#    image: rabbitmq:latest
-
