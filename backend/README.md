@@ -1,4 +1,4 @@
-# djangotests_28782
+# vytrac_26930
 
 This is a repository for a web application developed with Django, built with [Crowdbotics](https://crowdbotics.com)
 
@@ -18,7 +18,7 @@ This is a repository for a web application developed with Django, built with [Cr
     ..
     ├── home                           # Starter home app
     ├── modules                        # Crowdbotics Modules app
-    ├── djangotests_28782  # Django project configurations
+    ├── vytrac_26930  # Django project configurations
     ├── static                         # Static assets
     ├── users                          # Starter users app
     ├── web_build                      # React Native Web build
@@ -50,7 +50,7 @@ This project is set up to run using [Docker Compose](https://docs.docker.com/com
 1. Install Docker:
    - Linux - [get.docker.com](https://get.docker.com/)
    - Windows or MacOS - [Docker Desktop](https://www.docker.com/products/docker-desktop)
-1. Clone this repo and `cd djangotests_28782`
+1. Clone this repo and `cd vytrac_26930`
 1. Make sure `Pipfile.lock` exists. If it doesn't, generate it with:
    ```sh
    $ docker run -it --rm -v "$PWD":/django -w /django python:3.7 pip3 install --no-cache-dir -q pipenv && pipenv lock
@@ -89,7 +89,7 @@ This project is set up to run using [Docker Compose](https://docs.docker.com/com
 ### Installation
 
 1. Install [pipenv](https://pypi.org/project/pipenv/)
-2. Clone this repo and `cd djangotests_28782`
+2. Clone this repo and `cd vytrac_26930`
 3. Run `pip install --user --upgrade pipenv` to get the latest pipenv version.
 4. Run `pipenv --python 3.6`
 5. Run `pipenv install`

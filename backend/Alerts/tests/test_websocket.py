@@ -5,7 +5,7 @@ from channels.testing import WebsocketCommunicator
 
 from Functions.TestClass import TestClass
 from Functions.calendar_setup import calendar_setup
-from djangotests_28782.asgi import application
+from vytrac_26930.asgi import application
 
 from asgiref.sync import async_to_sync
 from django.test import TestCase

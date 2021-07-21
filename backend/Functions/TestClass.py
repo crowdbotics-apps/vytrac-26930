@@ -6,7 +6,7 @@ from Functions.MyAppsConfig import create_all_data_str
 from Functions.calendar_setup import calendar_setup
 from Functions.make_fields_permissions import make_fields_permissions
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'djangotests_28782.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'vytrac_26930.settings')
 
 import django
 
