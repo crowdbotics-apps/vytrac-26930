@@ -28,30 +28,19 @@ services:
   redis:
     ports:
       - "6379:6379"
-
-#  rabbitmq:
-#    environment:
-#      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER:-admin}
-#      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS:-admin}
-#    volumes:
-#      - ./.docker/rabbitmq/etc/:/etc/rabbitmq/
-#      - ./.docker/rabbitmq/data/:/var/lib/rabbitmq/
-#      - ./.docker/rabbitmq/logs/:/var/log/rabbitmq/
-#    ports:
-#      - 5672:5672
-#      - 15672:15672
-
-#  celery:
-#    build: .
-#    command: celery -A core djangotests_28782 -l INFO
-#    volumes:
-#      - .:/usr/src/app
-#    environment:
-#      - DEBUG=1
-#      - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
-#      - CELERY_BROKER=redis://redis:6379/0
-#      - CELERY_BACKEND=redis://redis:6379/0
-#    depends_on:
-#      - web
-#      - redis
-#      - rabbitmq
+  celery:
+    build: .
+    command:
+      - celery -A djangotests_28782 worker -l info
+      - celery -A djangotests_28782 beat -l info -S django
+    volumes:
+      - .:/usr/src/app
+    environment:
+      - DEBUG=1
+      - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
+      - CELERY_BROKER=redis://redis:6379/0
+      - CELERY_BACKEND=redis://redis:6379/0
+    depends_on:
+      - web
+      - redis
+      - rabbitmq
