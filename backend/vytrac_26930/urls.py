@@ -1,26 +1,16 @@
-from django.conf import settings
-from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import path, include, re_path
+from django.views.generic.base import TemplateView
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
-from rest_framework import permissions, generics
+from rest_framework import permissions
 from rest_framework.documentation import include_docs_urls
 from rest_framework_simplejwt.tokens import RefreshToken
 
 from users.models import User
 
-
-from django.contrib import admin
-from django.urls import path, include, re_path
-from django.views.generic.base import TemplateView
-from allauth.account.views import confirm_email
-from rest_framework import permissions
-from drf_yasg.views import get_schema_view
-from drf_yasg import openapi
-
 urlpatterns = [
-    # path("", include("home.urls")),
+    path("", include("home.urls")),
     path('admin/', admin.site.urls),
     path('users/', include('users.urls')),
     path('calendars/', include('calendars.urls')),
@@ -49,17 +39,16 @@ description = """
      2. `user__username__in=AliJesusNikolina` you can also check if string is part of a bigger string  
 
 5. `fieldname__sumfielname` = this used for subfields like you can say `column__name=anyname` to get all columns with subobjs that have name = anyname 
-        - example
-
-                ```
-                {
-                "column":{
-                    "name":"anyname","value":"anyvalue"
-                }
-                }
-                ```
+    - example
+    ```
+    {
+    "column":{
+        "name":"anyname","value":"anyvalue"
+    }
+    }
+    ```
 6. `name__icontains` i stand for "case insensitive"
-6. 'ordering`.
+6. `ordering`
     - example1 `?ordering=-id` you will get the order object flipped
     - example2 `?ordering=name` you will get the objects order alphabetically A-Z by the filed called `name`
     - example3 `?ordering=-name` you will get the objects order alphabetically Z-A by the filed called `name`
@@ -67,8 +56,29 @@ description = """
 7. `fields=<fieldname>,<fieldname><..>`,
     - example: `?fields=username,id,` this will filter out all other fields 
 
+_____________________________________________________
+- `"fieldname=F('modelname__fieldname')"`: this called F expression in django and I return dynamic value.
+- example:
+    if you have data like this
+    ```
+    {
+    "field_value":"22"
+    "column":{min:'22', max:'33'}
+    },
+    {
+    "field_value":"300"
+    "column":{min:'22', max:'33'}
+    }
+    ```
+- `url/?field_value__lte=F('column__min')` this will return only 
+    ```
+    {
+    "field_value":"22"
+    "column":{min:'22', max:'33'}
+    }
+    ```
 
-
+______________________________________________
 # headers
 - authentication
         ```
@@ -106,7 +116,8 @@ api_info = openapi.Info(
 schema_view = get_schema_view(
     api_info,
     public=True,
-    permission_classes=(permissions.IsAuthenticated,),
+    # permission_classes=(permissions.IsAuthenticated,),
+    permission_classes=(permissions.AllowAny,),
 )
 
 urlpatterns += [

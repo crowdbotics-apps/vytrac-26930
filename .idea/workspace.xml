@@ -19,18 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="526e06ab-6277-4307-bb54-3f7169b78ac1" name="Default Changelist" comment="conf FE">
-      <change afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
+    <list default="true" id="526e06ab-6277-4307-bb54-3f7169b78ac1" name="Default Changelist" comment="conf pipenv">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Alerts/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Alerts/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Alerts/tests/tast_celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Alerts/tests/tast_celery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Alerts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Alerts/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Functions/queryset_filtering.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Functions/queryset_filtering.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/docker-compose.override.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/docker-compose.override.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/vytrac_26930/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vytrac_26930/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/web_build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/web_build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/timesheets/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/timesheets/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/timesheets/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/timesheets/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/timesheets/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/timesheets/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/users/tests/test_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/users/tests/test_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/vytrac_26930/celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vytrac_26930/celeryApp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/vytrac_26930/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vytrac_26930/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +86,47 @@
       <recent name="$PROJECT_DIR$/backend/home/templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.compose">
+  <component name="RunManager" selected="Django Server.vytrac-26930">
+    <configuration name="Test: backend.timesheets.tests.TestTimeSheets.test_F_ex" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="vytrac-26930" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="backend.timesheets.tests.TestTimeSheets.test_F_ex" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: backend.timesheets.tests.TestTimeSheets.test_regEx" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="vytrac-26930" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="backend.timesheets.tests.TestTimeSheets.test_regEx" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="tests" type="DjangoTestsConfigurationType">
       <module name="vytrac-26930" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -147,8 +189,16 @@
     <list>
       <item itemvalue="Django Server.vytrac-26930" />
       <item itemvalue="Django tests.tests" />
+      <item itemvalue="Django tests.Test: backend.timesheets.tests.TestTimeSheets.test_F_ex" />
+      <item itemvalue="Django tests.Test: backend.timesheets.tests.TestTimeSheets.test_regEx" />
       <item itemvalue="Docker.compose" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Django tests.Test: backend.timesheets.tests.TestTimeSheets.test_F_ex" />
+        <item itemvalue="Django tests.Test: backend.timesheets.tests.TestTimeSheets.test_regEx" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -162,7 +212,7 @@
       <workItem from="1626877258011" duration="64000" />
       <workItem from="1626877496106" duration="2759000" />
       <workItem from="1626880340721" duration="2272000" />
-      <workItem from="1626882640106" duration="1618000" />
+      <workItem from="1626882640106" duration="10179000" />
     </task>
     <task id="LOCAL-00001" summary="0">
       <created>1626877902791</created>
@@ -192,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626882585293</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="conf pipenv">
+      <created>1626884428831</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1626884428831</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,35 +271,46 @@
     <MESSAGE value="0" />
     <MESSAGE value="conf celery" />
     <MESSAGE value="conf FE" />
-    <option name="LAST_COMMIT_MESSAGE" value="conf FE" />
+    <MESSAGE value="conf pipenv" />
+    <option name="LAST_COMMIT_MESSAGE" value="conf pipenv" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1236" height="229" key="GridCell.Tab.0.bottom" timestamp="1626883568912">
+    <state width="1236" height="229" key="GridCell.Tab.0.bottom" timestamp="1626946475438">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1236" height="229" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1626883568912" />
-    <state width="1236" height="229" key="GridCell.Tab.0.center" timestamp="1626883568911">
+    <state width="1236" height="229" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1626946475438" />
+    <state width="1236" height="229" key="GridCell.Tab.0.center" timestamp="1626946475437">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1236" height="229" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1626883568911" />
-    <state width="1236" height="229" key="GridCell.Tab.0.left" timestamp="1626883568910">
+    <state width="1236" height="229" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1626946475437" />
+    <state width="1236" height="229" key="GridCell.Tab.0.left" timestamp="1626946475436">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1236" height="229" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1626883568910" />
-    <state width="1236" height="229" key="GridCell.Tab.0.right" timestamp="1626883568911">
+    <state width="1236" height="229" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1626946475436" />
+    <state width="1236" height="229" key="GridCell.Tab.0.right" timestamp="1626946475437">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1236" height="229" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1626883568911" />
+    <state width="1236" height="229" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1626946475437" />
     <state x="149" y="39" key="SettingsEditor" timestamp="1626883404709">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1626883404709" />
-    <state x="341" y="155" width="670" height="548" key="find.popup" timestamp="1626883361520">
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1626884433431">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="341" y="155" width="670" height="548" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1626883361520" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1626884433431" />
+    <state x="341" y="155" width="678" height="548" key="find.popup" timestamp="1626946768918">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="341" y="155" width="678" height="548" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1626946768918" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1626938559093">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1626938559093" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/vytrac_26930$tests.coverage" NAME="tests Coverage Results" MODIFIED="1626882428141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/vytrac_26930$Test__backend_timesheets_tests_TestTimeSheets_test_F_ex.coverage" NAME="Test: backend.timesheets.tests.TestTimeSheets.test_F_ex Coverage Results" MODIFIED="1626945368636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/vytrac_26930$Test__backend_timesheets_tests_TestTimeSheets_test_regEx.coverage" NAME="Test: backend.timesheets.tests.TestTimeSheets.test_regEx Coverage Results" MODIFIED="1626941650733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

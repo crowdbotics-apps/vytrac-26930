@@ -1,6 +1,9 @@
 import os
 import environ
 import logging
+
+from django.core.checks import templates
+
 from modules.manifest import get_modules
 import datetime
 

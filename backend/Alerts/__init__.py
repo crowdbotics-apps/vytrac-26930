@@ -1,3 +1,3 @@
-from vytrac_26930.celery import app as celery_app
+from vytrac_26930.celeryApp import app as celery_app
 
 __all__ = ('celery_app',)

@@ -12,7 +12,7 @@ from Alerts.tasks import create_alert, add
 from celery.contrib.testing.worker import start_worker
 
 from users.models import Note
-from vytrac_26930.celery import app
+from vytrac_26930.celeryApp import app
 
 
 class AddTestCase(SimpleTestCase):

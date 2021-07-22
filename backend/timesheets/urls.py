@@ -126,6 +126,7 @@ class StatsticsView(ItemsView):
                 "user": 1
                 }
                 }]
+        ## to have the baseline of any measurement you can just say `?earliest=true`
                 ```
         """
 

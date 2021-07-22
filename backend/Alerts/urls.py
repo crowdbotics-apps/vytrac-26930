@@ -5,21 +5,23 @@ from .views import alertsRules, SeenBy, triggers
 
 class AlertsView(generics.ListAPIView):
     """
-    #`ws://domain/alerts/?token=<token>`
-    <h1 class="label label-primary">connect</h1>
-    - "convential I should name it notifcations"
+    "Note:" don't care bout `GET` this is just a mistake in the docs because its not meant for websocket request
 
-    <h1 class="label label-primary">onmessage</h1>
-    - None
+    - #`ws://domain/alerts/?token=<token>`
+    - <h1 class="label label-primary">connect</h1>
+        - "convential I should name it notifcations"
 
-    <h1 class="label label-primary">send</h1>
-    to tell that the alert with id=1 is seen by the current loged-in user
+    - <h1 class="label label-primary">onmessage</h1>
+        - None
+
+    - <h1 class="label label-primary">send</h1>
+        to tell that the alert with id=1 is seen by the current loged-in user
         ```
             {id:1, is_seen:true}
         ```
-    - Note queries and filters also work here.
+    - Note queries (filters/lookups) also work here.
         - In an additional query you can add `?related_only=tru` this will filter out the unrelated alert for the currened loged-in users
-            - this is useful if the user `is_superuser` in which she/he have the option to view all alerts of other users.
+        - this is useful if the user `is_superuser` in which she/he have the option to view all alerts of other users.
     """
     pass
 

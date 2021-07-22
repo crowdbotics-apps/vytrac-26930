@@ -2,23 +2,34 @@ from django.conf import settings
 from django.db import models
 from safedelete.models import SafeDeleteModel
 
+
 # from patients.models.models import Patient, Symptom #TODO this is circular
 
 
 class Column(SafeDeleteModel):
+    max = models.PositiveIntegerField(max_length=500, null=True, blank=True)
+    min = models.PositiveIntegerField(max_length=500, null=True, blank=True)
+    limit = models.PositiveIntegerField(max_length=500, null=True, blank=True,
+                                        help_text='if {absolute(latest measurement - the new measurement) == limit} then you may need to be alerted')
     name = models.CharField(max_length=500)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='statistics', null=True, on_delete=models.SET_NULL)
 
+    @property
+    def is_equal_to_limit(self):
+        return False
+        # self.value.objects.last().fied_value - self.value.earliest().fiedl_value
+
 
 # class BaseModel(SafeDeleteModel):
-
 
 
 class Value(SafeDeleteModel):
     object_id = models.CharField(max_length=20)
     name = models.CharField(max_length=50, blank=True)
     column = models.ForeignKey(Column, related_name='values', on_delete=models.CASCADE)
+    #TODO use regex to field_value__iregex=(\d+)(\/)($$>90)
     field_value = models.CharField(max_length=500)
+    #TODO remove action
     RCHOICES = (
         ('added', 'added'),
         ('changed', 'changed'),
@@ -30,7 +41,6 @@ class Value(SafeDeleteModel):
 
     class Meta:
         get_latest_by = 'date_created'
-
 
 # 1. interactions with daly palns
 # 2. clicks or wahtever

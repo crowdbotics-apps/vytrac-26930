@@ -3,6 +3,8 @@ from icecream import ic
 
 
 def queryset_filtering(model, queries):
+    from django.db.models import F
+
     ordering = queries.get("ordering")
     #TODO
     # AllDataStr.objects.annotate(search=SearchVector('name', 'codename')).filter(search='add event')
@@ -12,6 +14,12 @@ def queryset_filtering(model, queries):
 
     queries_fields = []
     for field in queries.keys():
+        if "F('" in queries[field]:
+            queries[field] = eval(queries[field])
+        #TODO
+        # if regex in field and  "r('" in queries[field]:
+        #     queries[field] = eval(queries[field])
+
         for x in all_fields:
             if x in field:
                 queries_fields.append(field)

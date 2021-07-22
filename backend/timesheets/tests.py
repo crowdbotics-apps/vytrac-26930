@@ -2,10 +2,12 @@ import datetime
 from unittest import mock
 
 import pytz
+from icecream import ic
 from rest_framework import status
 
 from Functions.TestClass import TestClass
 from Functions.calendar_setup import calendar_setup
+from Functions.queryset_filtering import queryset_filtering
 from timesheets.models import Column, Value
 
 
@@ -18,7 +20,6 @@ class TestTimeSheets(TestClass):
     def setUp(self, **kwargs):
         super().setUp()
 
-
         cal1 = Column.objects.create(name='oxygen', user=self.user)
 
         cal2 = Column.objects.create(name='blood_pressure', user=self.user)
@@ -28,17 +29,16 @@ class TestTimeSheets(TestClass):
         for i in range(4):
             Value.objects.create(object_id=1, column=cal1, field_value=i)
 
-        for i in range(1,5):
+        for i in range(1, 5):
             mocked = datetime.datetime(2018, 4, i, 0, 0, 0, tzinfo=pytz.utc)
             with mock.patch('django.utils.timezone.now', mock.Mock(return_value=mocked)):
                 object_id = i if is_odd(i) else i - 1
                 Value.objects.create(object_id=object_id, column=cal2, field_value=str(i + 1))
 
-
         for i in range(1, 7):
             mocked = datetime.datetime(2018, 4, i, 0, 0, 0, tzinfo=pytz.utc)
             with mock.patch('django.utils.timezone.now', mock.Mock(return_value=mocked)):
-                object_id = i if is_odd(i) else i-1
+                object_id = i if is_odd(i) else i - 1
                 Value.objects.create(object_id=object_id, column=cal3, field_value=str(not is_odd(i)))
 
     def test_statistics_url(self):
@@ -50,7 +50,7 @@ class TestTimeSheets(TestClass):
                                {
                                    "field_value": "22",
                                    "name": "ccc",
-                                   'object_id':'1',
+                                   'object_id': '1',
                                    "action": "added",
                                    "seen_by": [self.user.id],
                                    "date_created": "2021-06-09T10:42:41.458057Z",
@@ -115,4 +115,30 @@ class TestTimeSheets(TestClass):
         """
         res = self.client.get('/statistics/?cal=duration&column__name=oxgyen&column__user=1&intial=80&final=90')
         # assert 'days' in str(res.data['1']) #TODO
+
+    def test_F_ex(self):
+        col = Column.objects.create(name='new col', min=9, max=12)
+        Value.objects.create(name='name', column=col, field_value=9)
+        Value.objects.create(name='name', column=col, field_value=12)
+        x = queryset_filtering(Value, {'field_value': "F('column__max')"})
+        x = x.first()
+        assert x.field_value == '12'
+
+        x = queryset_filtering(Value, {'field_value': "F('column__min')"})
+        x = x.first()
+        assert x.field_value == '9'
+
+    def test_regEx(self):
+        col = Column.objects.create(name='new col', min=123, max=12)
+        Value.objects.create(name='name', column=col, field_value='120/80')
+        Value.objects.create(name='name', column=col, field_value='120/90')
+        for i in Value.objects.filter(field_value__iregex=r'(\d+)(/)(90)'):
+            ic(i.field_value)
+
+    def test_aggigration(self):
+        col1 = Column.objects.create(name='diastolic', min=70, max=90)
+        col2 = Column.objects.create(name='systolic', min=130, max=110)
+        Value.objects.create(name='diastolic', column=col1, field_value=90)
+        Value.objects.create(name='systolic', column=col2, field_value=120)
+        # Value.objects.aggregate
 
