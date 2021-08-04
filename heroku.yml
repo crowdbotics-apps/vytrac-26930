@@ -7,5 +7,4 @@ build:
 release:
   image: web
   command:
-    - python3 manage.py migrate
-    - python3 manage.py dummy_data
+    - ./release.sh
